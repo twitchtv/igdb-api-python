@@ -1,0 +1,11 @@
+setup.py
+dist/__init__.py
+dist/igdbapi_pb2.py
+igdb_api_python.egg-info/PKG-INFO
+igdb_api_python.egg-info/SOURCES.txt
+igdb_api_python.egg-info/dependency_links.txt
+igdb_api_python.egg-info/top_level.txt
+src/__init__.py
+src/wrapper.py
+tests/__init__.py
+tests/test_wrapper.py
