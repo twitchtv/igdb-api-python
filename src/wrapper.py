@@ -1,7 +1,6 @@
 """IGDB wrapper module for the api v3 with Apicalypse"""
 
 from requests import get
-import igdbapi_pb2 as igdb
 
 API_URL = "https://api-v3.igdb.com/"
 
@@ -32,7 +31,6 @@ class IGDBWrapper:
        
         request_params = {
             'headers': {
-                # 'Accept': 'application/json',
                 'user-key': self.user_key
             }
         }
