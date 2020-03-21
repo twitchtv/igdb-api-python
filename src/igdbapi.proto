@@ -1,0 +1,1341 @@
+
+syntax = "proto3";
+
+package proto;
+
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true; // Must be true because of private access in files.
+option optimize_for = CODE_SIZE;
+
+message Count {
+    int64 count = 1;
+}
+
+message MultiQueryResult {
+    string name = 1;
+    repeated bytes results = 2;
+    int64 count = 3;
+}
+
+message MultiQueryResultArray {
+    repeated MultiQueryResult result = 1;
+}
+
+message AchievementResult {
+    repeated Achievement achievements = 1;
+}
+
+message Achievement {
+    uint64 id = 1;
+    AchievementIcon achievementIcon = 2; 
+    AchievementCategoryEnum category = 3; 
+    google.protobuf.Timestamp createdAt = 4; 
+    string description = 5; 
+    string externalId = 6; 
+    Game game = 7; 
+    RegionLanguageEnum language = 8; 
+    AchievementIcon lockedAchievementIcon = 9; 
+    string name = 10; 
+    int32 owners = 11; 
+    double ownersPercentage = 12; 
+    AchievementRankEnum rank = 13; 
+    string slug = 14; 
+    repeated int32 tags = 15; 
+    google.protobuf.Timestamp updatedAt = 16; 
+}
+
+
+enum AchievementCategoryEnum {
+    ACHIEVEMENT_CATEGORY_NULL = 0;
+    PLAYSTATION = 1;
+    XBOX = 2;
+    STEAM = 3;
+}
+
+
+enum RegionLanguageEnum {
+    REGION_LANGUAGE_NULL = 0;
+    EUROPE = 1;
+    NORTH_AMERICA = 2;
+    AUSTRALIA = 3;
+    NEW_ZELAND = 4;
+    JAPAN = 5;
+    CHINA = 6;
+    ASIA = 7;
+    WORLDWIDE = 8;
+    HONG_KONG = 9;
+    SOUTH_KOREA = 10;
+}
+
+
+enum AchievementRankEnum {
+    ACHIEVEMENT_RANK_NULL = 0;
+    BRONZE = 1;
+    SILVER = 2;
+    GOLD = 3;
+    PLATINUM = 4;
+}
+
+message AchievementIconResult {
+    repeated AchievementIcon achievementicons = 1;
+}
+
+message AchievementIcon {
+    uint64 id = 1;
+    bool alphaChannel = 2; 
+    bool animated = 3; 
+    int32 height = 4; 
+    string imageId = 5; 
+    string url = 6; 
+    int32 width = 7; 
+}
+
+message AgeRatingResult {
+    repeated AgeRating ageratings = 1;
+}
+
+message AgeRating {
+    uint64 id = 1;
+    AgeRatingCategoryEnum category = 2; 
+    repeated AgeRatingContentDescription contentDescriptions = 3; 
+    AgeRatingRatingEnum rating = 4; 
+    string ratingCoverUrl = 5; 
+    string synopsis = 6; 
+}
+
+
+enum AgeRatingCategoryEnum {
+    AGERATING_CATEGORY_NULL = 0;
+    ESRB = 1;
+    PEGI = 2;
+}
+
+
+enum AgeRatingRatingEnum {
+    AGERATING_RATING_NULL = 0;
+    THREE = 1;
+    SEVEN = 2;
+    TWELVE = 3;
+    SIXTEEN = 4;
+    EIGHTEEN = 5;
+    RP = 6;
+    EC = 7;
+    E = 8;
+    E10 = 9;
+    T = 10;
+    M = 11;
+    AO = 12;
+}
+
+message AgeRatingContentDescriptionResult {
+    repeated AgeRatingContentDescription ageratingcontentdescriptions = 1;
+}
+
+message AgeRatingContentDescription {
+    uint64 id = 1;
+    AgeRatingRatingEnum category = 2; 
+    string description = 3; 
+}
+
+message AlternativeNameResult {
+    repeated AlternativeName alternativenames = 1;
+}
+
+message AlternativeName {
+    uint64 id = 1;
+    string comment = 2; 
+    Game game = 3; 
+    string name = 4; 
+}
+
+message ArtworkResult {
+    repeated Artwork artworks = 1;
+}
+
+message Artwork {
+    uint64 id = 1;
+    bool alphaChannel = 2; 
+    bool animated = 3; 
+    Game game = 4; 
+    int32 height = 5; 
+    string imageId = 6; 
+    string url = 7; 
+    int32 width = 8; 
+}
+
+message CharacterResult {
+    repeated Character characters = 1;
+}
+
+message Character {
+    uint64 id = 1;
+    repeated string akas = 2; 
+    string countryName = 3; 
+    google.protobuf.Timestamp createdAt = 4; 
+    string description = 5; 
+    repeated Game games = 6; 
+    GenderGenderEnum gender = 7; 
+    CharacterMugShot mugShot = 8; 
+    string name = 9; 
+    repeated Person people = 10; 
+    string slug = 11; 
+    CharacterSpeciesEnum species = 12; 
+    google.protobuf.Timestamp updatedAt = 13; 
+    string url = 14; 
+}
+
+
+enum GenderGenderEnum {
+    GENDER_GENDER_NULL = 0;
+    MALE = 1;
+    FEMALE = 2;
+    OTHER = 3;
+}
+
+
+enum CharacterSpeciesEnum {
+    CHARACTER_SPECIES_NULL = 0;
+    HUMAN = 1;
+    ALIEN = 2;
+    ANIMAL = 3;
+    ANDROID = 4;
+    UNKNOWN = 5;
+}
+
+message CharacterMugShotResult {
+    repeated CharacterMugShot charactermugshots = 1;
+}
+
+message CharacterMugShot {
+    uint64 id = 1;
+    bool alphaChannel = 2; 
+    bool animated = 3; 
+    int32 height = 4; 
+    string imageId = 5; 
+    string url = 6; 
+    int32 width = 7; 
+}
+
+message CollectionResult {
+    repeated Collection collections = 1;
+}
+
+message Collection {
+    uint64 id = 1;
+    google.protobuf.Timestamp createdAt = 2; 
+    repeated Game games = 3; 
+    string name = 4; 
+    string slug = 5; 
+    google.protobuf.Timestamp updatedAt = 6; 
+    string url = 7; 
+}
+
+message CompanyResult {
+    repeated Company companies = 1;
+}
+
+message Company {
+    uint64 id = 1;
+    google.protobuf.Timestamp changeDate = 2; 
+    DateFormatStartDateCategoryEnum changeDateCategory = 3; 
+    Company changedCompanyId = 4; 
+    int32 country = 5; 
+    google.protobuf.Timestamp createdAt = 6; 
+    string description = 7; 
+    repeated Game developed = 8; 
+    CompanyLogo logo = 9; 
+    string name = 10; 
+    Company parent = 11; 
+    repeated Game published = 12; 
+    string slug = 13; 
+    google.protobuf.Timestamp startDate = 14; 
+    DateFormatStartDateCategoryEnum startDateCategory = 15; 
+    google.protobuf.Timestamp updatedAt = 16; 
+    string url = 17; 
+    repeated CompanyWebsite websites = 18; 
+}
+
+
+enum DateFormatStartDateCategoryEnum {
+    YYYYMMMMDD = 0;
+    YYYYMMMM = 1;
+    YYYY = 2;
+    YYYYQ1 = 3;
+    YYYYQ2 = 4;
+    YYYYQ3 = 5;
+    YYYYQ4 = 6;
+    TBD = 7;
+}
+
+message CompanyLogoResult {
+    repeated CompanyLogo companylogos = 1;
+}
+
+message CompanyLogo {
+    uint64 id = 1;
+    bool alphaChannel = 2; 
+    bool animated = 3; 
+    int32 height = 4; 
+    string imageId = 5; 
+    string url = 6; 
+    int32 width = 7; 
+}
+
+message CompanyWebsiteResult {
+    repeated CompanyWebsite companywebsites = 1;
+}
+
+message CompanyWebsite {
+    uint64 id = 1;
+    WebsiteCategoryEnum category = 2; 
+    bool trusted = 3; 
+    string url = 4; 
+}
+
+
+enum WebsiteCategoryEnum {
+    WEBSITE_CATEGORY_NULL = 0;
+    WEBSITE_OFFICIAL = 1;
+    WEBSITE_WIKIA = 2;
+    WEBSITE_WIKIPEDIA = 3;
+    WEBSITE_FACEBOOK = 4;
+    WEBSITE_TWITTER = 5;
+    WEBSITE_TWITCH = 6;
+    WEBSITE_INSTAGRAM = 8;
+    WEBSITE_YOUTUBE = 9;
+    WEBSITE_IPHONE = 10;
+    WEBSITE_IPAD = 11;
+    WEBSITE_ANDROID = 12;
+    WEBSITE_STEAM = 13;
+    WEBSITE_REDDIT = 14;
+    WEBSITE_ITCH = 15;
+    WEBSITE_EPICGAMES = 16;
+    WEBSITE_GOG = 17;
+}
+
+message CoverResult {
+    repeated Cover covers = 1;
+}
+
+message Cover {
+    uint64 id = 1;
+    bool alphaChannel = 2; 
+    bool animated = 3; 
+    Game game = 4; 
+    int32 height = 5; 
+    string imageId = 6; 
+    string url = 7; 
+    int32 width = 8; 
+}
+
+message CreditResult {
+    repeated Credit credits = 1;
+}
+
+message Credit {
+    uint64 id = 1;
+    CreditCategoryEnum category = 2; 
+    Character character = 3; 
+    string characterCreditedName = 4; 
+    string comment = 5; 
+    Company company = 6; 
+    int32 country = 7; 
+    google.protobuf.Timestamp createdAt = 8; 
+    string creditedName = 9; 
+    Game game = 10; 
+    Person person = 11; 
+    Title personTitle = 12; 
+    int32 position = 13; 
+    google.protobuf.Timestamp updatedAt = 14; 
+}
+
+
+enum CreditCategoryEnum {
+    CREDIT_CATEGORY_NULL = 0;
+    VOICE_ACTOR = 1;
+    LANGUAGE = 2;
+    COMPANY_CREDIT = 3;
+    EMPLOYEE = 4;
+    MISC = 5;
+    SUPPORT_COMPANY = 6;
+}
+
+message ExternalGameResult {
+    repeated ExternalGame externalgames = 1;
+}
+
+message ExternalGame {
+    uint64 id = 1;
+    ExternalGameCategoryEnum category = 2; 
+    google.protobuf.Timestamp createdAt = 3; 
+    Game game = 4; 
+    string name = 5; 
+    string uid = 6; 
+    google.protobuf.Timestamp updatedAt = 7; 
+    string url = 8; 
+    int32 year = 9; 
+}
+
+
+enum ExternalGameCategoryEnum {
+    EXTERNALGAME_CATEGORY_NULL = 0;
+    EXTERNALGAME_STEAM = 1;
+    EXTERNALGAME_GOG = 5;
+    EXTERNALGAME_YOUTUBE = 10;
+    EXTERNALGAME_MICROSOFT = 11;
+    EXTERNALGAME_APPLE = 13;
+    EXTERNALGAME_TWITCH = 14;
+    EXTERNALGAME_ANDROID = 15;
+}
+
+message FeedResult {
+    repeated Feed feeds = 1;
+}
+
+message Feed {
+    uint64 id = 1;
+    FeedCategoryEnum category = 2; 
+    string content = 3; 
+    google.protobuf.Timestamp createdAt = 4; 
+    int32 feedLikesCount = 5; 
+    GameVideo feedVideo = 6; 
+    repeated Game games = 7; 
+    string meta = 8; 
+    google.protobuf.Timestamp publishedAt = 9; 
+    Pulse pulse = 10; 
+    string slug = 11; 
+    string title = 12; 
+    string uid = 13; 
+    google.protobuf.Timestamp updatedAt = 14; 
+    string url = 15; 
+    int32 user = 16; 
+}
+
+
+enum FeedCategoryEnum {
+    FEED_CATEGORY_NULL = 0;
+    PULSE_ARTICLE = 1;
+    COMING_SOON = 2;
+    NEW_TRAILER = 3;
+    USER_CONTRIBUTED_ITEM = 5;
+    USER_CONTRIBUTIONS_ITEM = 6;
+    PAGE_CONTRIBUTED_ITEM = 7;
+}
+
+message FeedFollowResult {
+    repeated FeedFollow feedfollows = 1;
+}
+
+message FeedFollow {
+    uint64 id = 1;
+    google.protobuf.Timestamp createdAt = 2; 
+    FeedCategoryEnum feed = 3; 
+    google.protobuf.Timestamp publishedAt = 4; 
+    google.protobuf.Timestamp updatedAt = 5; 
+    User user = 6; 
+}
+
+message FollowResult {
+    repeated Follow follows = 1;
+}
+
+message Follow {
+    uint64 id = 1;
+    Game game = 2; 
+    User user = 3; 
+}
+
+message FranchiseResult {
+    repeated Franchise franchises = 1;
+}
+
+message Franchise {
+    uint64 id = 1;
+    google.protobuf.Timestamp createdAt = 2; 
+    repeated Game games = 3; 
+    string name = 4; 
+    string slug = 5; 
+    google.protobuf.Timestamp updatedAt = 6; 
+    string url = 7; 
+}
+
+message GameResult {
+    repeated Game games = 1;
+}
+
+message Game {
+    uint64 id = 1;
+    repeated AgeRating ageRatings = 2; 
+    double aggregatedRating = 3; 
+    int32 aggregatedRatingCount = 4; 
+    repeated AlternativeName alternativeNames = 5; 
+    repeated Artwork artworks = 6; 
+    repeated Game bundles = 7; 
+    GameCategoryEnum category = 8; 
+    Collection collection = 9; 
+    Cover cover = 10; 
+    google.protobuf.Timestamp createdAt = 11; 
+    repeated Game dlcs = 12; 
+    repeated Game expansions = 13; 
+    repeated ExternalGame externalGames = 14; 
+    google.protobuf.Timestamp firstReleaseDate = 15; 
+    int32 follows = 16; 
+    Franchise franchise = 17; 
+    repeated Franchise franchises = 18; 
+    repeated GameEngine gameEngines = 19; 
+    repeated GameMode gameModes = 20; 
+    repeated Genre genres = 21; 
+    int32 hypes = 22; 
+    repeated InvolvedCompany involvedCompanies = 23; 
+    repeated Keyword keywords = 24; 
+    repeated MultiplayerMode multiplayerModes = 25; 
+    string name = 26; 
+    Game parentGame = 27; 
+    repeated Platform platforms = 28; 
+    repeated PlayerPerspective playerPerspectives = 29; 
+    double popularity = 30; 
+    int32 pulseCount = 31; 
+    double rating = 32; 
+    int32 ratingCount = 33; 
+    repeated ReleaseDate releaseDates = 34; 
+    repeated Screenshot screenshots = 35; 
+    repeated Game similarGames = 36; 
+    string slug = 37; 
+    repeated Game standaloneExpansions = 38; 
+    GameStatusEnum status = 39; 
+    string storyline = 40; 
+    string summary = 41; 
+    repeated int32 tags = 42; 
+    repeated Theme themes = 43; 
+    TimeToBeat timeToBeat = 44; 
+    double totalRating = 45; 
+    int32 totalRatingCount = 46; 
+    google.protobuf.Timestamp updatedAt = 47; 
+    string url = 48; 
+    Game versionParent = 49; 
+    string versionTitle = 50; 
+    repeated GameVideo videos = 51; 
+    repeated Website websites = 52; 
+}
+
+
+enum GameCategoryEnum {
+    MAIN_GAME = 0;
+    DLC_ADDON = 1;
+    EXPANSION = 2;
+    BUNDLE = 3;
+    STANDALONE_EXPANSION = 4;
+    MOD = 5;
+    EPISODE = 6;
+}
+
+
+enum GameStatusEnum {
+    RELEASED = 0;
+    ALPHA = 2;
+    BETA = 3;
+    EARLY_ACCESS = 4;
+    OFFLINE = 5;
+    CANCELLED = 6;
+    RUMORED = 7;
+}
+
+message GameEngineResult {
+    repeated GameEngine gameengines = 1;
+}
+
+message GameEngine {
+    uint64 id = 1;
+    repeated Company companies = 2; 
+    google.protobuf.Timestamp createdAt = 3; 
+    string description = 4; 
+    GameEngineLogo logo = 5; 
+    string name = 6; 
+    repeated Platform platforms = 7; 
+    string slug = 8; 
+    google.protobuf.Timestamp updatedAt = 9; 
+    string url = 10; 
+}
+
+message GameEngineLogoResult {
+    repeated GameEngineLogo gameenginelogos = 1;
+}
+
+message GameEngineLogo {
+    uint64 id = 1;
+    bool alphaChannel = 2; 
+    bool animated = 3; 
+    int32 height = 4; 
+    string imageId = 5; 
+    string url = 6; 
+    int32 width = 7; 
+}
+
+message GameModeResult {
+    repeated GameMode gamemodes = 1;
+}
+
+message GameMode {
+    uint64 id = 1;
+    google.protobuf.Timestamp createdAt = 2; 
+    string name = 3; 
+    string slug = 4; 
+    google.protobuf.Timestamp updatedAt = 5; 
+    string url = 6; 
+}
+
+message GameVersionResult {
+    repeated GameVersion gameversions = 1;
+}
+
+message GameVersion {
+    uint64 id = 1;
+    google.protobuf.Timestamp createdAt = 2; 
+    repeated GameVersionFeature features = 3; 
+    Game game = 4; 
+    repeated Game games = 5; 
+    google.protobuf.Timestamp updatedAt = 6; 
+    string url = 7; 
+}
+
+message GameVersionFeatureResult {
+    repeated GameVersionFeature gameversionfeatures = 1;
+}
+
+message GameVersionFeature {
+    uint64 id = 1;
+    GameVersionFeatureCategoryEnum category = 2; 
+    string description = 3; 
+    int32 position = 4; 
+    string title = 5; 
+    repeated GameVersionFeatureValue values = 6; 
+}
+
+
+enum GameVersionFeatureCategoryEnum {
+    BOOLEAN = 0;
+    DESCRIPTION = 1;
+}
+
+message GameVersionFeatureValueResult {
+    repeated GameVersionFeatureValue gameversionfeaturevalues = 1;
+}
+
+message GameVersionFeatureValue {
+    uint64 id = 1;
+    Game game = 2; 
+    GameVersionFeature gameFeature = 3; 
+    GameVersionFeatureValueIncludedFeatureEnum includedFeature = 4; 
+    string note = 5; 
+}
+
+
+enum GameVersionFeatureValueIncludedFeatureEnum {
+    NOT_INCLUDED = 0;
+    INCLUDED = 1;
+    PRE_ORDER_ONLY = 2;
+}
+
+message GameVideoResult {
+    repeated GameVideo gamevideos = 1;
+}
+
+message GameVideo {
+    uint64 id = 1;
+    Game game = 2; 
+    string name = 3; 
+    string videoId = 4; 
+}
+
+message GenreResult {
+    repeated Genre genres = 1;
+}
+
+message Genre {
+    uint64 id = 1;
+    google.protobuf.Timestamp createdAt = 2; 
+    string name = 3; 
+    string slug = 4; 
+    google.protobuf.Timestamp updatedAt = 5; 
+    string url = 6; 
+}
+
+message InvolvedCompanyResult {
+    repeated InvolvedCompany involvedcompanies = 1;
+}
+
+message InvolvedCompany {
+    uint64 id = 1;
+    Company company = 2; 
+    google.protobuf.Timestamp createdAt = 3; 
+    bool developer = 4; 
+    Game game = 5; 
+    bool porting = 6; 
+    bool publisher = 7; 
+    bool supporting = 8; 
+    google.protobuf.Timestamp updatedAt = 9; 
+}
+
+message KeywordResult {
+    repeated Keyword keywords = 1;
+}
+
+message Keyword {
+    uint64 id = 1;
+    google.protobuf.Timestamp createdAt = 2; 
+    string name = 3; 
+    string slug = 4; 
+    google.protobuf.Timestamp updatedAt = 5; 
+    string url = 6; 
+}
+
+message ListResult {
+    repeated List lists = 1;
+}
+
+message List {
+    uint64 id = 1;
+    google.protobuf.Timestamp createdAt = 2; 
+    string description = 3; 
+    int32 entriesCount = 4; 
+    repeated ListEntry listEntries = 5; 
+    repeated int32 listTags = 6; 
+    repeated Game listedGames = 7; 
+    string name = 8; 
+    bool numbering = 9; 
+    bool private = 10; 
+    repeated List similarLists = 11; 
+    string slug = 12; 
+    google.protobuf.Timestamp updatedAt = 13; 
+    string url = 14; 
+    User user = 15; 
+}
+
+message ListEntryResult {
+    repeated ListEntry listentries = 1;
+}
+
+message ListEntry {
+    uint64 id = 1;
+    string description = 2; 
+    Game game = 3; 
+    List list = 4; 
+    Platform platform = 5; 
+    int32 position = 6; 
+    bool private = 7; 
+    User user = 8; 
+}
+
+message MultiplayerModeResult {
+    repeated MultiplayerMode multiplayermodes = 1;
+}
+
+message MultiplayerMode {
+    uint64 id = 1;
+    bool campaigncoop = 2; 
+    bool dropin = 3; 
+    Game game = 4; 
+    bool lancoop = 5; 
+    bool offlinecoop = 6; 
+    int32 offlinecoopmax = 7; 
+    int32 offlinemax = 8; 
+    bool onlinecoop = 9; 
+    int32 onlinecoopmax = 10; 
+    int32 onlinemax = 11; 
+    Platform platform = 12; 
+    bool splitscreen = 13; 
+    bool splitscreenonline = 14; 
+}
+
+message PageResult {
+    repeated Page pages = 1;
+}
+
+message Page {
+    uint64 id = 1;
+    PageBackground background = 2; 
+    string battlenet = 3; 
+    PageCategoryEnum category = 4; 
+    ColorColorEnum color = 5; 
+    Company company = 6; 
+    int32 country = 7; 
+    google.protobuf.Timestamp createdAt = 8; 
+    string description = 9; 
+    Feed feed = 10; 
+    Game game = 11; 
+    string name = 12; 
+    string origin = 13; 
+    int32 pageFollowsCount = 14; 
+    PageLogo pageLogo = 15; 
+    string slug = 16; 
+    PageSubCategoryEnum subCategory = 17; 
+    google.protobuf.Timestamp updatedAt = 18; 
+    string uplay = 19; 
+    string url = 20; 
+    User user = 21; 
+    repeated PageWebsite websites = 22; 
+}
+
+
+enum PageCategoryEnum {
+    PAGE_CATEGORY_NULL = 0;
+    PERSONALITY = 1;
+    MEDIA_ORGANIZATION = 2;
+    CONTENT_CREATOR = 3;
+    CLAN_TEAM = 4;
+}
+
+
+enum ColorColorEnum {
+    GREEN = 0;
+    BLUE = 1;
+    RED = 2;
+    ORANGE = 3;
+    PINK = 4;
+    YELLOW = 5;
+}
+
+
+enum PageSubCategoryEnum {
+    PAGE_SUB_CATEGORY_NULL = 0;
+    USER = 1;
+    GAME = 2;
+    COMPANY = 3;
+    CONSUMER = 4;
+    INDUSTRY = 5;
+    E_SPORTS = 6;
+}
+
+message PageBackgroundResult {
+    repeated PageBackground pagebackgrounds = 1;
+}
+
+message PageBackground {
+    uint64 id = 1;
+    bool alphaChannel = 2; 
+    bool animated = 3; 
+    int32 height = 4; 
+    string imageId = 5; 
+    string url = 6; 
+    int32 width = 7; 
+}
+
+message PageLogoResult {
+    repeated PageLogo pagelogos = 1;
+}
+
+message PageLogo {
+    uint64 id = 1;
+    bool alphaChannel = 2; 
+    bool animated = 3; 
+    int32 height = 4; 
+    string imageId = 5; 
+    string url = 6; 
+    int32 width = 7; 
+}
+
+message PageWebsiteResult {
+    repeated PageWebsite pagewebsites = 1;
+}
+
+message PageWebsite {
+    uint64 id = 1;
+    WebsiteCategoryEnum category = 2; 
+    bool trusted = 3; 
+    string url = 4; 
+}
+
+message PersonResult {
+    repeated Person people = 1;
+}
+
+message Person {
+    uint64 id = 1;
+    string bio = 2; 
+    repeated Character characters = 3; 
+    int32 country = 4; 
+    google.protobuf.Timestamp createdAt = 5; 
+    repeated Game creditedGames = 6; 
+    string description = 7; 
+    google.protobuf.Timestamp dob = 8; 
+    GenderGenderEnum gender = 9; 
+    int32 lovesCount = 10; 
+    PersonMugShot mugShot = 11; 
+    string name = 12; 
+    repeated string nicknames = 13; 
+    Person parent = 14; 
+    string slug = 15; 
+    google.protobuf.Timestamp updatedAt = 16; 
+    string url = 17; 
+    repeated Game voiceActed = 18; 
+    repeated PersonWebsite websites = 19; 
+}
+
+message PersonMugShotResult {
+    repeated PersonMugShot personmugshots = 1;
+}
+
+message PersonMugShot {
+    uint64 id = 1;
+    int32 height = 2; 
+    string imageId = 3; 
+    string url = 4; 
+    int32 width = 5; 
+}
+
+message PersonWebsiteResult {
+    repeated PersonWebsite personwebsites = 1;
+}
+
+message PersonWebsite {
+    uint64 id = 1;
+    WebsiteCategoryEnum category = 2; 
+    bool trusted = 3; 
+    string url = 4; 
+}
+
+message PlatformResult {
+    repeated Platform platforms = 1;
+}
+
+message Platform {
+    uint64 id = 1;
+    string abbreviation = 2; 
+    string alternativeName = 3; 
+    PlatformCategoryEnum category = 4; 
+    google.protobuf.Timestamp createdAt = 5; 
+    int32 generation = 6; 
+    string name = 7; 
+    PlatformLogo platformLogo = 8; 
+    ProductFamily productFamily = 9; 
+    string slug = 10; 
+    string summary = 11; 
+    google.protobuf.Timestamp updatedAt = 12; 
+    string url = 13; 
+    repeated PlatformVersion versions = 14; 
+    repeated PlatformWebsite websites = 15; 
+}
+
+
+enum PlatformCategoryEnum {
+    PLATFORM_CATEGORY_NULL = 0;
+    CONSOLE = 1;
+    ARCADE = 2;
+    PLATFORM = 3;
+    OPERATING_SYSTEM = 4;
+    PORTABLE_CONSOLE = 5;
+    COMPUTER = 6;
+}
+
+message PlatformLogoResult {
+    repeated PlatformLogo platformlogos = 1;
+}
+
+message PlatformLogo {
+    uint64 id = 1;
+    bool alphaChannel = 2; 
+    bool animated = 3; 
+    int32 height = 4; 
+    string imageId = 5; 
+    string url = 6; 
+    int32 width = 7; 
+}
+
+message PlatformVersionResult {
+    repeated PlatformVersion platformversions = 1;
+}
+
+message PlatformVersion {
+    uint64 id = 1;
+    repeated PlatformVersionCompany companies = 2; 
+    string connectivity = 3; 
+    string cpu = 4; 
+    string graphics = 5; 
+    PlatformVersionCompany mainManufacturer = 6; 
+    string media = 7; 
+    string memory = 8; 
+    string name = 9; 
+    string online = 10; 
+    string os = 11; 
+    string output = 12; 
+    PlatformLogo platformLogo = 13; 
+    repeated PlatformVersionReleaseDate platformVersionReleaseDates = 14; 
+    string resolutions = 15; 
+    string slug = 16; 
+    string sound = 17; 
+    string storage = 18; 
+    string summary = 19; 
+    string url = 20; 
+}
+
+message PlatformVersionCompanyResult {
+    repeated PlatformVersionCompany platformversioncompanies = 1;
+}
+
+message PlatformVersionCompany {
+    uint64 id = 1;
+    string comment = 2; 
+    Company company = 3; 
+    bool developer = 4; 
+    bool manufacturer = 5; 
+}
+
+message PlatformVersionReleaseDateResult {
+    repeated PlatformVersionReleaseDate platformversionreleasedates = 1;
+}
+
+message PlatformVersionReleaseDate {
+    uint64 id = 1;
+    DateFormatStartDateCategoryEnum category = 2; 
+    google.protobuf.Timestamp createdAt = 3; 
+    google.protobuf.Timestamp date = 4; 
+    string human = 5; 
+    int32 m = 6; 
+    PlatformVersion platformVersion = 7; 
+    RegionLanguageEnum region = 8; 
+    google.protobuf.Timestamp updatedAt = 9; 
+    int32 y = 10; 
+}
+
+message PlatformWebsiteResult {
+    repeated PlatformWebsite platformwebsites = 1;
+}
+
+message PlatformWebsite {
+    uint64 id = 1;
+    WebsiteCategoryEnum category = 2; 
+    bool trusted = 3; 
+    string url = 4; 
+}
+
+message PlayerPerspectiveResult {
+    repeated PlayerPerspective playerperspectives = 1;
+}
+
+message PlayerPerspective {
+    uint64 id = 1;
+    google.protobuf.Timestamp createdAt = 2; 
+    string name = 3; 
+    string slug = 4; 
+    google.protobuf.Timestamp updatedAt = 5; 
+    string url = 6; 
+}
+
+message ProductFamilyResult {
+    repeated ProductFamily productfamilies = 1;
+}
+
+message ProductFamily {
+    uint64 id = 1;
+    string name = 2; 
+    string slug = 3; 
+}
+
+message PulseResult {
+    repeated Pulse pulses = 1;
+}
+
+message Pulse {
+    uint64 id = 1;
+    string author = 2; 
+    int32 category = 3; 
+    google.protobuf.Timestamp createdAt = 4; 
+    bool ignored = 5; 
+    string image = 6; 
+    google.protobuf.Timestamp publishedAt = 7; 
+    PulseImage pulseImage = 8; 
+    PulseSource pulseSource = 9; 
+    string summary = 10; 
+    repeated int32 tags = 11; 
+    string title = 12; 
+    string uid = 13; 
+    google.protobuf.Timestamp updatedAt = 14; 
+    repeated string videos = 15; 
+    PulseUrl website = 16; 
+}
+
+message PulseGroupResult {
+    repeated PulseGroup pulsegroups = 1;
+}
+
+message PulseGroup {
+    uint64 id = 1;
+    google.protobuf.Timestamp createdAt = 2; 
+    Game game = 3; 
+    string name = 4; 
+    google.protobuf.Timestamp publishedAt = 5; 
+    repeated Pulse pulses = 6; 
+    repeated int32 tags = 7; 
+    google.protobuf.Timestamp updatedAt = 8; 
+}
+
+message PulseImageResult {
+    repeated PulseImage pulseimages = 1;
+}
+
+message PulseImage {
+    uint64 id = 1;
+    bool alphaChannel = 2; 
+    bool animated = 3; 
+    int32 height = 4; 
+    string imageId = 5; 
+    string url = 6; 
+    int32 width = 7; 
+}
+
+message PulseSourceResult {
+    repeated PulseSource pulsesources = 1;
+}
+
+message PulseSource {
+    uint64 id = 1;
+    Game game = 2; 
+    string name = 3; 
+    Page page = 4; 
+}
+
+message PulseUrlResult {
+    repeated PulseUrl pulseurls = 1;
+}
+
+message PulseUrl {
+    uint64 id = 1;
+    bool trusted = 2; 
+    string url = 3; 
+}
+
+message RateResult {
+    repeated Rate rates = 1;
+}
+
+message Rate {
+    uint64 id = 1;
+    Game game = 2; 
+    bool private = 3; 
+    double rating = 4; 
+    User user = 5; 
+}
+
+message ReleaseDateResult {
+    repeated ReleaseDate releasedates = 1;
+}
+
+message ReleaseDate {
+    uint64 id = 1;
+    DateFormatStartDateCategoryEnum category = 2; 
+    google.protobuf.Timestamp createdAt = 3; 
+    google.protobuf.Timestamp date = 4; 
+    Game game = 5; 
+    string human = 6; 
+    int32 m = 7; 
+    Platform platform = 8; 
+    RegionLanguageEnum region = 9; 
+    google.protobuf.Timestamp updatedAt = 10; 
+    int32 y = 11; 
+}
+
+message ReviewResult {
+    repeated Review reviews = 1;
+}
+
+message Review {
+    uint64 id = 1;
+    ReviewCategoryEnum category = 2; 
+    string conclusion = 3; 
+    string content = 4; 
+    google.protobuf.Timestamp createdAt = 5; 
+    Game game = 6; 
+    string introduction = 7; 
+    int32 likes = 8; 
+    string negativePoints = 9; 
+    Platform platform = 10; 
+    string positivePoints = 11; 
+    string slug = 12; 
+    string title = 13; 
+    google.protobuf.Timestamp updatedAt = 14; 
+    string url = 15; 
+    User user = 16; 
+    Rate userRating = 17; 
+    ReviewVideo video = 18; 
+    int32 views = 19; 
+}
+
+
+enum ReviewCategoryEnum {
+    REVIEW_CATEGORY_NULL = 0;
+    TEXT = 1;
+    VIDEO = 2;
+}
+
+message ReviewVideoResult {
+    repeated ReviewVideo reviewvideos = 1;
+}
+
+message ReviewVideo {
+    uint64 id = 1;
+    bool trusted = 2; 
+    string url = 3; 
+}
+
+message ScreenshotResult {
+    repeated Screenshot screenshots = 1;
+}
+
+message Screenshot {
+    uint64 id = 1;
+    bool alphaChannel = 2; 
+    bool animated = 3; 
+    Game game = 4; 
+    int32 height = 5; 
+    string imageId = 6; 
+    string url = 7; 
+    int32 width = 8; 
+}
+
+message SearchResult {
+    repeated Search searches = 1;
+}
+
+message Search {
+    uint64 id = 1;
+    string alternativeName = 2; 
+    Character character = 3; 
+    Collection collection = 4; 
+    Company company = 5; 
+    string description = 6; 
+    Game game = 7; 
+    string name = 8; 
+    Person person = 9; 
+    Platform platform = 10; 
+    double popularity = 11; 
+    google.protobuf.Timestamp publishedAt = 12; 
+    TestDummy testDummy = 13; 
+    Theme theme = 14; 
+}
+
+message TestDummyResult {
+    repeated TestDummy testdummies = 1;
+}
+
+message TestDummy {
+    uint64 id = 1;
+    bool boolValue = 2; 
+    google.protobuf.Timestamp createdAt = 3; 
+    TestDummyEnumTestEnum enumTest = 4; 
+    double floatValue = 5; 
+    Game game = 6; 
+    repeated int32 integerArray = 7; 
+    int32 integerValue = 8; 
+    string name = 9; 
+    int32 newIntegerValue = 10; 
+    bool private = 11; 
+    string slug = 12; 
+    repeated string stringArray = 13; 
+    repeated TestDummy testDummies = 14; 
+    TestDummy testDummy = 15; 
+    google.protobuf.Timestamp updatedAt = 16; 
+    string url = 17; 
+    User user = 18; 
+}
+
+
+enum TestDummyEnumTestEnum {
+    TESTDUMMY_ENUM_TEST_NULL = 0;
+    ENUM1 = 1;
+    ENUM2 = 2;
+}
+
+message ThemeResult {
+    repeated Theme themes = 1;
+}
+
+message Theme {
+    uint64 id = 1;
+    google.protobuf.Timestamp createdAt = 2; 
+    string name = 3; 
+    string slug = 4; 
+    google.protobuf.Timestamp updatedAt = 5; 
+    string url = 6; 
+}
+
+message TimeToBeatResult {
+    repeated TimeToBeat timetobeats = 1;
+}
+
+message TimeToBeat {
+    uint64 id = 1;
+    int32 completely = 2; 
+    Game game = 3; 
+    int32 hastly = 4; 
+    int32 normally = 5; 
+}
+
+message TitleResult {
+    repeated Title titles = 1;
+}
+
+message Title {
+    uint64 id = 1;
+    google.protobuf.Timestamp createdAt = 2; 
+    string description = 3; 
+    repeated Game games = 4; 
+    string name = 5; 
+    string slug = 6; 
+    google.protobuf.Timestamp updatedAt = 7; 
+    string url = 8; 
+}
+
+message UserResult {
+    repeated User users = 1;
+}
+
+message User {
+    uint64 id = 1;
+    string battlenet = 2; 
+    ColorColorEnum color = 3; 
+    google.protobuf.Timestamp createdAt = 4; 
+    string discord = 5; 
+    string facebook = 6; 
+    string googlePlus = 7; 
+    string instagram = 8; 
+    string linkedin = 9; 
+    string origin = 10; 
+    string pinterest = 11; 
+    string presentation = 12; 
+    string reddit = 13; 
+    UserRoleEnum role = 14; 
+    string slug = 15; 
+    string soundcloud = 16; 
+    string steam = 17; 
+    string twitch = 18; 
+    string twitter = 19; 
+    google.protobuf.Timestamp updatedAt = 20; 
+    string uplay = 21; 
+    string url = 22; 
+    string username = 23; 
+    string youtube = 24; 
+}
+
+
+enum UserRoleEnum {
+    USER_ROLE_NULL = 0;
+    USER_USER = 1;
+    USER_ADVANCED_USER = 2;
+    USER_SUPER_ADVANCED_USER = 3;
+    USER_KEEPER = 4;
+    USER_ADMIN = 9;
+    USER_SUPER_ADMIN = 10;
+}
+
+message WebsiteResult {
+    repeated Website websites = 1;
+}
+
+message Website {
+    uint64 id = 1;
+    WebsiteCategoryEnum category = 2; 
+    Game game = 3; 
+    bool trusted = 4; 
+    string url = 5; 
+}
