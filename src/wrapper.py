@@ -1,6 +1,6 @@
 """IGDB wrapper module for the api v3 with Apicalypse"""
 
-from requests import get
+from requests import get, post
 
 API_URL = "https://api-v3.igdb.com/"
 
@@ -16,7 +16,7 @@ class IGDBWrapper:
         url = IGDBWrapper._build_url(endpoint)
         params = self._compose_request(query)
 
-        response = get(url, **params)
+        response = post(url, **params)
         response.raise_for_status()
 
         return response.content
