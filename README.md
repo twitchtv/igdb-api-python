@@ -21,6 +21,8 @@ Information about the Querying language APICalypse:
 
 The Wrapper can handle both the IGDB generated classes and JSON (Strings), I have chosen to make the API's Generated classes ([Protocol Buffers](https://developers.google.com/protocol-buffers/)) the standard way because it will make it easier to use as you don't have to create your own classes to hold the information.
 
+The package contains two modules: the `wrapper` which holds the tools for querying the API, and `igdbapi_pb2` which contains all of the generated classes for the Protocol Buffers.
+
 # Installation and Setup
 
 TBD
