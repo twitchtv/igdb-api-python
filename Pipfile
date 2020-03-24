@@ -6,11 +6,11 @@ verify_ssl = true
 [dev-packages]
 pytest = "*"
 pylint = "*"
-pytest = "*"
 protobuf = "*"
+wheel = "*"
+twine = "*"
 
 [packages]
-igdb-api-python = {editable = true,path = "."}
 requests = "*"
 
 [requires]
