@@ -1,11 +1,12 @@
+README.md
 setup.py
-dist/__init__.py
-dist/igdbapi_pb2.py
 igdb_api_python.egg-info/PKG-INFO
 igdb_api_python.egg-info/SOURCES.txt
 igdb_api_python.egg-info/dependency_links.txt
+igdb_api_python.egg-info/requires.txt
 igdb_api_python.egg-info/top_level.txt
-src/__init__.py
-src/wrapper.py
+src/igdb/__init__.py
+src/igdb/igdbapi_pb2.py
+src/igdb/wrapper.py
 tests/__init__.py
 tests/test_wrapper.py
