@@ -32,7 +32,7 @@ TBD
 Create a new IGDBWrapper object and give it your API key:
 
 ```py
-from igdb import IGDBWrapper
+from igdb.wrapper import IGDBWrapper
 wrapper = IGDBWrapper("YOUR_API_KEY")
 ```
 
@@ -54,7 +54,7 @@ byte_array = wrapper.api_request(
 # parse into JSON however you like...
 
 # Protobuf API request
-from igdb import GameResult
+from igdb.igdbapi_pb2 import GameResult
 byte_array = wrapper.api_request(
             'games.pb', # Note the '.pb' suffix at the endpoint
             'fields id, name; offset 0; where platforms=48;'
