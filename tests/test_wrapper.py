@@ -1,5 +1,5 @@
 from pytest import raises
-from src.wrapper import IGDBWrapper
+from src.igdb.wrapper import IGDBWrapper
 
 def test_stores_user_key():
     wrapper = IGDBWrapper('test')
@@ -12,7 +12,6 @@ def test_composes_query():
     assert wrapper._compose_request('fields test,test2,test3; offset 2') == {
         'data': 'fields test,test2,test3; offset 2',
         'headers': {
-            'Accept': 'application/json',
             'user-key': 'test'
         }
     }
