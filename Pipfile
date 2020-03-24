@@ -5,13 +5,13 @@ verify_ssl = true
 
 [dev-packages]
 pytest = "*"
+pylint = "*"
+pytest = "*"
+protobuf = "*"
 
 [packages]
 igdb-api-python = {editable = true,path = "."}
-pylint = "*"
-pytest = "*"
 requests = "*"
-protobuf = "*"
 
 [requires]
 python_version = "3.7"
