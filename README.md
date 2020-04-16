@@ -25,7 +25,9 @@ The package contains two modules: the `wrapper` which holds the tools for queryi
 
 # Installation and Setup
 
-TBD
+```py
+pip install igdb-api-v3
+```
 
 # Usage
 
