@@ -20,5 +20,5 @@ setup(
   python_requires='>=3',
   packages=['igdb'],
   package_dir={'igdb': 'src/igdb'},
-  install_requires=['requests']
+  install_requires=['requests', 'protobuf']
 )
