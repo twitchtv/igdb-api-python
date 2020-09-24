@@ -6,11 +6,11 @@ verify_ssl = true
 [dev-packages]
 pytest = "*"
 pylint = "*"
-protobuf = "*"
 wheel = "*"
 twine = "*"
 
 [packages]
+protobuf = "*"
 requests = "*"
 
 [requires]
