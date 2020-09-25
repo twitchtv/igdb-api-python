@@ -3,7 +3,7 @@ A Python wrapper for IGDB.com's Video Game Database API.
 
 __IMPORTANT__
 
-This wrapper is ONLY compatible with the newest release (V3).
+This wrapper is ONLY compatible with the newest release (V4).
 
 ## About IGDB
 One of the principles behind IGDB.com is accessibility of data. We wish to share the data with anyone who wants to build cool video game oriented websites, apps and services. This means that the information you contribute to IGDB.com can be used by other projects as well.
@@ -26,18 +26,18 @@ The package contains two modules: the `wrapper` which holds the tools for queryi
 # Installation and Setup
 
 ```py
-pip install igdb-api-v3
+pip install igdb-api-v4
 ```
 
 # Usage
 
-## Using your API key
+## Using your Twitch Credentials
 
-Create a new IGDBWrapper object and give it your API key:
+Create a new IGDBWrapper object and give it your Client-ID and App Access Token:
 
 ```py
 from igdb.wrapper import IGDBWrapper
-wrapper = IGDBWrapper("YOUR_API_KEY")
+wrapper = IGDBWrapper("YOUR_CLIENT_ID", "YOUR_APP_ACCESS_TOKEN")
 ```
 
 ## How to use the wrapper
@@ -73,4 +73,36 @@ The wrapper throws a [`requests.HTTPError`](https://2.python-requests.org/en/mas
   
 ## Code Examples
 
-TBD
+# Contributing / Developers
+
+## Setup
+### Python
+This project uses Python 3.7+ and pipenv to manage dependencies.
+```
+pip install --user pipenv
+pipenv install --dev
+```
+
+### Protocol Buffers
+#### Windows
+This project uses (protoc)[https://github.com/protocolbuffers/protobuf/releases] to generate the protocol buffer wrapper.
+```
+set PB_REL="https://github.com/protocolbuffers/protobuf/releases"
+set PB_VERSION=3.13.0
+set PB_OS=win
+set PB_ARCH=64
+curl -LO %PB_REL%/download/v%PB_VERSION%/protoc-%PB_VERSION%-%PB_OS%%PB_ARCH%.zip
+```
+
+Unzip to a protoc folder.
+```
+cd protoc-3.13.0-win64\bin
+protoc.exe -I=../../src/igdb --python_out=../../src/igdb igdbapi.proto
+```
+
+
+### Mac
+Then run protoc:
+```
+protoc -I=. --python_out=. igdbapi.proto
+```

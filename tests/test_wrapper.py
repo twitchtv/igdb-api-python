@@ -1,18 +1,21 @@
 from pytest import raises
 from src.igdb.wrapper import IGDBWrapper
 
-def test_stores_user_key():
-    wrapper = IGDBWrapper('test')
-    assert hasattr(wrapper, 'user_key')
-    assert wrapper.user_key == 'test'
+def test_stores_authentication():
+    wrapper = IGDBWrapper('client', 'token')
+    assert hasattr(wrapper, 'client_id')
+    assert wrapper.client_id == 'client'
+    assert hasattr(wrapper, 'auth_token')
+    assert wrapper.auth_token == 'token'
 
 def test_composes_query():
-    wrapper = IGDBWrapper('test')
-    assert IGDBWrapper._build_url('dummy') == 'https://api-v3.igdb.com/dummy'
+    wrapper = IGDBWrapper('client', 'token')
+    assert IGDBWrapper._build_url('dummy') == 'https://api.igdb.com/v4/dummy'
     assert wrapper._compose_request('fields test,test2,test3; offset 2') == {
         'data': 'fields test,test2,test3; offset 2',
         'headers': {
-            'user-key': 'test'
+            'Client-ID': 'client',
+            'Authorization': 'Bearer token'
         }
     }
 
