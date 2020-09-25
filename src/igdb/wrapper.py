@@ -1,13 +1,13 @@
-"""IGDB wrapper module for the api v3 with Apicalypse"""
+"""IGDB wrapper module for the api v4 with Apicalypse"""
 
-from requests import get, post
+from requests import post
 
-API_URL = "https://api-v3.igdb.com/"
+API_URL = "https://api.igdb.com/v4/"
 
 class IGDBWrapper:
-    def __init__(self, user_key=None):
-        self.user_key = user_key
-        self.endpoint = ''
+    def __init__(self, client_id=None, auth_token=None):
+        self.client_id = client_id
+        self.auth_token = auth_token
 
     def api_request(self, endpoint=None, query=None):
         """
@@ -31,7 +31,8 @@ class IGDBWrapper:
        
         request_params = {
             'headers': {
-                'user-key': self.user_key
+                'Client-ID': self.client_id,
+                'Authorization': f'Bearer {self.auth_token}',
             }
         }
 
