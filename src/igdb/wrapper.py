@@ -23,7 +23,7 @@ class IGDBWrapper:
 
     @staticmethod
     def _build_url(endpoint=''):
-        return f'{API_URL}{endpoint}'
+        return API_URL + endpoint
 
     def _compose_request(self, query=None):
         if not query:
@@ -32,7 +32,7 @@ class IGDBWrapper:
         request_params = {
             'headers': {
                 'Client-ID': self.client_id,
-                'Authorization': f'Bearer {self.auth_token}',
+                'Authorization': 'Bearer ' + self.auth_token,
             }
         }
 
