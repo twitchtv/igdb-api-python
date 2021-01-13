@@ -1,4 +1,4 @@
-# IGDB Python API V3
+# IGDB Python API V4
 A Python wrapper for IGDB.com's Video Game Database API. 
 
 __IMPORTANT__
