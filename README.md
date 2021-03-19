@@ -46,15 +46,15 @@ Right now, the wrapper is very barebone and only has one wrapping function `api_
 
 More utilities will be added in the future, such as endpoint helper functions, JSON conversion, and Protobuf message parsing.
 
-* `api_request` 
-  This method handles IGDB generated proto classes which returns an `ByteArray` to be used to fill the appropriate class. 
+* `api_request`
+  This method handles IGDB generated proto classes which returns an `ByteArray` to be used to fill the appropriate class.
 ```py
 '''With a wrapper instance already created'''
 # JSON API request
 byte_array = wrapper.api_request(
             'games',
             'fields id, name; offset 0; where platforms=48;'
-            )
+          )
 # parse into JSON however you like...
 
 # Protobuf API request
@@ -62,7 +62,7 @@ from igdb.igdbapi_pb2 import GameResult
 byte_array = wrapper.api_request(
             'games.pb', # Note the '.pb' suffix at the endpoint
             'fields id, name; offset 0; where platforms=48;'
-            )
+          )
 games_message = GameResult()
 games_message.ParseFromString(byte_array) # Fills the protobuf message object with the response
 ```
@@ -70,7 +70,7 @@ games_message.ParseFromString(byte_array) # Fills the protobuf message object wi
 ## Exceptions
 
 The wrapper throws a [`requests.HTTPError`](https://2.python-requests.org/en/master/api/#requests.HTTPError) when an exception occurs from the API.
-  
+
 ## Code Examples
 
 # Contributing / Developers
@@ -85,7 +85,7 @@ pipenv install --dev
 
 ### Protocol Buffers
 #### Windows
-This project uses (protoc)[https://github.com/protocolbuffers/protobuf/releases] to generate the protocol buffer wrapper.
+This project uses [protoc](https://github.com/protocolbuffers/protobuf/releases) to generate the protocol buffer wrapper.
 ```
 set PB_REL="https://github.com/protocolbuffers/protobuf/releases"
 set PB_VERSION=3.13.0
