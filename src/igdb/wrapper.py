@@ -1,15 +1,16 @@
 """IGDB wrapper module for the api v4 with Apicalypse"""
 
 from requests import post
+from requests.models import Request, Response
 
 API_URL = "https://api.igdb.com/v4/"
 
 class IGDBWrapper:
-    def __init__(self, client_id=None, auth_token=None):
+    def __init__(self, client_id:str=None, auth_token:str=None) -> None:
         self.client_id = client_id
         self.auth_token = auth_token
 
-    def api_request(self, endpoint=None, query=None):
+    def api_request(self, endpoint:str=None, query:str=None) -> Response:
         """
         Takes an endpoint and the Apicalypse query and returns the api response as a byte string.
         """
@@ -22,10 +23,10 @@ class IGDBWrapper:
         return response.content
 
     @staticmethod
-    def _build_url(endpoint=''):
+    def _build_url(endpoint:str='') -> str:
         return ('%s%s' % (API_URL, endpoint))
 
-    def _compose_request(self, query=None):
+    def _compose_request(self, query:str=None) -> Request:
         if not query:
             raise Exception('No query provided!\nEither provide an inline query following Apicalypse\'s syntax or an Apicalypse object')
        
