@@ -20,7 +20,7 @@ def test_composes_query():
     }
 
 def test_raises_when_query_bad():
-    wrapper = IGDBWrapper('')
+    wrapper = IGDBWrapper('', '')
     with raises(Exception) as exc:
         wrapper._compose_request()
         assert exc.type is Exception
