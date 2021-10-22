@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'H\002P\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\rigdbapi.proto\x12\x05proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x16\n\x05\x43ount\x12\r\n\x05\x63ount\x18\x01 \x01(\x03\"@\n\x10MultiQueryResult\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07results\x18\x02 \x03(\x0c\x12\r\n\x05\x63ount\x18\x03 \x01(\x03\"@\n\x15MultiQueryResultArray\x12\'\n\x06result\x18\x01 \x03(\x0b\x32\x17.proto.MultiQueryResult\"7\n\x0f\x41geRatingResult\x12$\n\nageratings\x18\x01 \x03(\x0b\x32\x10.proto.AgeRating\"\xf3\x01\n\tAgeRating\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32\x1c.proto.AgeRatingCategoryEnum\x12@\n\x14\x63ontent_descriptions\x18\x03 \x03(\x0b\x32\".proto.AgeRatingContentDescription\x12*\n\x06rating\x18\x04 \x01(\x0e\x32\x1a.proto.AgeRatingRatingEnum\x12\x18\n\x10rating_cover_url\x18\x05 \x01(\t\x12\x10\n\x08synopsis\x18\x06 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x07 \x01(\t\"m\n!AgeRatingContentDescriptionResult\x12H\n\x1c\x61geratingcontentdescriptions\x18\x01 \x03(\x0b\x32\".proto.AgeRatingContentDescription\"~\n\x1b\x41geRatingContentDescription\x12\n\n\x02id\x18\x01 \x01(\x04\x12,\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32\x1a.proto.AgeRatingRatingEnum\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x04 \x01(\t\"I\n\x15\x41lternativeNameResult\x12\x30\n\x10\x61lternativenames\x18\x01 \x03(\x0b\x32\x16.proto.AlternativeName\"i\n\x0f\x41lternativeName\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x0f\n\x07\x63omment\x18\x02 \x01(\t\x12\x19\n\x04game\x18\x03 \x01(\x0b\x32\x0b.proto.Game\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x05 \x01(\t\"1\n\rArtworkResult\x12 \n\x08\x61rtworks\x18\x01 \x03(\x0b\x32\x0e.proto.Artwork\"\xa9\x01\n\x07\x41rtwork\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x15\n\ralpha_channel\x18\x02 \x01(\x08\x12\x10\n\x08\x61nimated\x18\x03 \x01(\x08\x12\x19\n\x04game\x18\x04 \x01(\x0b\x32\x0b.proto.Game\x12\x0e\n\x06height\x18\x05 \x01(\x05\x12\x10\n\x08image_id\x18\x06 \x01(\t\x12\x0b\n\x03url\x18\x07 \x01(\t\x12\r\n\x05width\x18\x08 \x01(\x05\x12\x10\n\x08\x63hecksum\x18\t \x01(\t\"7\n\x0f\x43haracterResult\x12$\n\ncharacters\x18\x01 \x03(\x0b\x32\x10.proto.Character\"\x89\x03\n\tCharacter\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x0c\n\x04\x61kas\x18\x02 \x03(\t\x12\x14\n\x0c\x63ountry_name\x18\x03 \x01(\t\x12.\n\ncreated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x13\n\x0b\x64\x65scription\x18\x05 \x01(\t\x12\x1a\n\x05games\x18\x06 \x03(\x0b\x32\x0b.proto.Game\x12\'\n\x06gender\x18\x07 \x01(\x0e\x32\x17.proto.GenderGenderEnum\x12)\n\x08mug_shot\x18\x08 \x01(\x0b\x32\x17.proto.CharacterMugShot\x12\x0c\n\x04name\x18\t \x01(\t\x12\x0c\n\x04slug\x18\n \x01(\t\x12,\n\x07species\x18\x0b \x01(\x0e\x32\x1b.proto.CharacterSpeciesEnum\x12.\n\nupdated_at\x18\x0c \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\r \x01(\t\x12\x10\n\x08\x63hecksum\x18\x0e \x01(\t\"L\n\x16\x43haracterMugShotResult\x12\x32\n\x11\x63haractermugshots\x18\x01 \x03(\x0b\x32\x17.proto.CharacterMugShot\"\x97\x01\n\x10\x43haracterMugShot\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x15\n\ralpha_channel\x18\x02 \x01(\x08\x12\x10\n\x08\x61nimated\x18\x03 \x01(\x08\x12\x0e\n\x06height\x18\x04 \x01(\x05\x12\x10\n\x08image_id\x18\x05 \x01(\t\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\r\n\x05width\x18\x07 \x01(\x05\x12\x10\n\x08\x63hecksum\x18\x08 \x01(\t\":\n\x10\x43ollectionResult\x12&\n\x0b\x63ollections\x18\x01 \x03(\x0b\x32\x11.proto.Collection\"\xcf\x01\n\nCollection\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x1a\n\x05games\x18\x03 \x03(\x0b\x32\x0b.proto.Game\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x0c\n\x04slug\x18\x05 \x01(\t\x12.\n\nupdated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x07 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x08 \x01(\t\"2\n\rCompanyResult\x12!\n\tcompanies\x18\x01 \x03(\x0b\x32\x0e.proto.Company\"\x9b\x05\n\x07\x43ompany\x12\n\n\x02id\x18\x01 \x01(\x04\x12/\n\x0b\x63hange_date\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x45\n\x14\x63hange_date_category\x18\x03 \x01(\x0e\x32\'.proto.DateFormatChangeDateCategoryEnum\x12*\n\x12\x63hanged_company_id\x18\x04 \x01(\x0b\x32\x0e.proto.Company\x12\x0f\n\x07\x63ountry\x18\x05 \x01(\x05\x12.\n\ncreated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x13\n\x0b\x64\x65scription\x18\x07 \x01(\t\x12\x1e\n\tdeveloped\x18\x08 \x03(\x0b\x32\x0b.proto.Game\x12 \n\x04logo\x18\t \x01(\x0b\x32\x12.proto.CompanyLogo\x12\x0c\n\x04name\x18\n \x01(\t\x12\x1e\n\x06parent\x18\x0b \x01(\x0b\x32\x0e.proto.Company\x12\x1e\n\tpublished\x18\x0c \x03(\x0b\x32\x0b.proto.Game\x12\x0c\n\x04slug\x18\r \x01(\t\x12.\n\nstart_date\x18\x0e \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x44\n\x13start_date_category\x18\x0f \x01(\x0e\x32\'.proto.DateFormatChangeDateCategoryEnum\x12.\n\nupdated_at\x18\x10 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x11 \x01(\t\x12\'\n\x08websites\x18\x12 \x03(\x0b\x32\x15.proto.CompanyWebsite\x12\x10\n\x08\x63hecksum\x18\x13 \x01(\t\"=\n\x11\x43ompanyLogoResult\x12(\n\x0c\x63ompanylogos\x18\x01 \x03(\x0b\x32\x12.proto.CompanyLogo\"\x92\x01\n\x0b\x43ompanyLogo\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x15\n\ralpha_channel\x18\x02 \x01(\x08\x12\x10\n\x08\x61nimated\x18\x03 \x01(\x08\x12\x0e\n\x06height\x18\x04 \x01(\x05\x12\x10\n\x08image_id\x18\x05 \x01(\t\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\r\n\x05width\x18\x07 \x01(\x05\x12\x10\n\x08\x63hecksum\x18\x08 \x01(\t\"F\n\x14\x43ompanyWebsiteResult\x12.\n\x0f\x63ompanywebsites\x18\x01 \x03(\x0b\x32\x15.proto.CompanyWebsite\"z\n\x0e\x43ompanyWebsite\x12\n\n\x02id\x18\x01 \x01(\x04\x12,\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32\x1a.proto.WebsiteCategoryEnum\x12\x0f\n\x07trusted\x18\x03 \x01(\x08\x12\x0b\n\x03url\x18\x04 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x05 \x01(\t\"+\n\x0b\x43overResult\x12\x1c\n\x06\x63overs\x18\x01 \x03(\x0b\x32\x0c.proto.Cover\"\xa7\x01\n\x05\x43over\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x15\n\ralpha_channel\x18\x02 \x01(\x08\x12\x10\n\x08\x61nimated\x18\x03 \x01(\x08\x12\x19\n\x04game\x18\x04 \x01(\x0b\x32\x0b.proto.Game\x12\x0e\n\x06height\x18\x05 \x01(\x05\x12\x10\n\x08image_id\x18\x06 \x01(\t\x12\x0b\n\x03url\x18\x07 \x01(\t\x12\r\n\x05width\x18\x08 \x01(\x05\x12\x10\n\x08\x63hecksum\x18\t \x01(\t\"@\n\x12\x45xternalGameResult\x12*\n\rexternalgames\x18\x01 \x03(\x0b\x32\x13.proto.ExternalGame\"\xf3\x02\n\x0c\x45xternalGame\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x31\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32\x1f.proto.ExternalGameCategoryEnum\x12.\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x19\n\x04game\x18\x04 \x01(\x0b\x32\x0b.proto.Game\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x0b\n\x03uid\x18\x06 \x01(\t\x12.\n\nupdated_at\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x08 \x01(\t\x12\x0c\n\x04year\x18\t \x01(\x05\x12+\n\x05media\x18\n \x01(\x0e\x32\x1c.proto.ExternalGameMediaEnum\x12!\n\x08platform\x18\x0b \x01(\x0b\x32\x0f.proto.Platform\x12\x11\n\tcountries\x18\x0c \x03(\x05\x12\x10\n\x08\x63hecksum\x18\r \x01(\t\"7\n\x0f\x46ranchiseResult\x12$\n\nfranchises\x18\x01 \x03(\x0b\x32\x10.proto.Franchise\"\xce\x01\n\tFranchise\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x1a\n\x05games\x18\x03 \x03(\x0b\x32\x0b.proto.Game\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x0c\n\x04slug\x18\x05 \x01(\t\x12.\n\nupdated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x07 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x08 \x01(\t\"(\n\nGameResult\x12\x1a\n\x05games\x18\x01 \x03(\x0b\x32\x0b.proto.Game\"\xe2\x0c\n\x04Game\x12\n\n\x02id\x18\x01 \x01(\x04\x12%\n\x0b\x61ge_ratings\x18\x02 \x03(\x0b\x32\x10.proto.AgeRating\x12\x19\n\x11\x61ggregated_rating\x18\x03 \x01(\x01\x12\x1f\n\x17\x61ggregated_rating_count\x18\x04 \x01(\x05\x12\x31\n\x11\x61lternative_names\x18\x05 \x03(\x0b\x32\x16.proto.AlternativeName\x12 \n\x08\x61rtworks\x18\x06 \x03(\x0b\x32\x0e.proto.Artwork\x12\x1c\n\x07\x62undles\x18\x07 \x03(\x0b\x32\x0b.proto.Game\x12)\n\x08\x63\x61tegory\x18\x08 \x01(\x0e\x32\x17.proto.GameCategoryEnum\x12%\n\ncollection\x18\t \x01(\x0b\x32\x11.proto.Collection\x12\x1b\n\x05\x63over\x18\n \x01(\x0b\x32\x0c.proto.Cover\x12.\n\ncreated_at\x18\x0b \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x19\n\x04\x64lcs\x18\x0c \x03(\x0b\x32\x0b.proto.Game\x12\x1f\n\nexpansions\x18\r \x03(\x0b\x32\x0b.proto.Game\x12+\n\x0e\x65xternal_games\x18\x0e \x03(\x0b\x32\x13.proto.ExternalGame\x12\x36\n\x12\x66irst_release_date\x18\x0f \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0f\n\x07\x66ollows\x18\x10 \x01(\x05\x12#\n\tfranchise\x18\x11 \x01(\x0b\x32\x10.proto.Franchise\x12$\n\nfranchises\x18\x12 \x03(\x0b\x32\x10.proto.Franchise\x12\'\n\x0cgame_engines\x18\x13 \x03(\x0b\x32\x11.proto.GameEngine\x12#\n\ngame_modes\x18\x14 \x03(\x0b\x32\x0f.proto.GameMode\x12\x1c\n\x06genres\x18\x15 \x03(\x0b\x32\x0c.proto.Genre\x12\r\n\x05hypes\x18\x16 \x01(\x05\x12\x32\n\x12involved_companies\x18\x17 \x03(\x0b\x32\x16.proto.InvolvedCompany\x12 \n\x08keywords\x18\x18 \x03(\x0b\x32\x0e.proto.Keyword\x12\x31\n\x11multiplayer_modes\x18\x19 \x03(\x0b\x32\x16.proto.MultiplayerMode\x12\x0c\n\x04name\x18\x1a \x01(\t\x12 \n\x0bparent_game\x18\x1b \x01(\x0b\x32\x0b.proto.Game\x12\"\n\tplatforms\x18\x1c \x03(\x0b\x32\x0f.proto.Platform\x12\x35\n\x13player_perspectives\x18\x1d \x03(\x0b\x32\x18.proto.PlayerPerspective\x12\x0e\n\x06rating\x18\x1e \x01(\x01\x12\x14\n\x0crating_count\x18\x1f \x01(\x05\x12)\n\rrelease_dates\x18  \x03(\x0b\x32\x12.proto.ReleaseDate\x12&\n\x0bscreenshots\x18! \x03(\x0b\x32\x11.proto.Screenshot\x12\"\n\rsimilar_games\x18\" \x03(\x0b\x32\x0b.proto.Game\x12\x0c\n\x04slug\x18# \x01(\t\x12*\n\x15standalone_expansions\x18$ \x03(\x0b\x32\x0b.proto.Game\x12%\n\x06status\x18% \x01(\x0e\x32\x15.proto.GameStatusEnum\x12\x11\n\tstoryline\x18& \x01(\t\x12\x0f\n\x07summary\x18\' \x01(\t\x12\x0c\n\x04tags\x18( \x03(\x05\x12\x1c\n\x06themes\x18) \x03(\x0b\x32\x0c.proto.Theme\x12\x14\n\x0ctotal_rating\x18* \x01(\x01\x12\x1a\n\x12total_rating_count\x18+ \x01(\x05\x12.\n\nupdated_at\x18, \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18- \x01(\t\x12#\n\x0eversion_parent\x18. \x01(\x0b\x32\x0b.proto.Game\x12\x15\n\rversion_title\x18/ \x01(\t\x12 \n\x06videos\x18\x30 \x03(\x0b\x32\x10.proto.GameVideo\x12 \n\x08websites\x18\x31 \x03(\x0b\x32\x0e.proto.Website\x12\x10\n\x08\x63hecksum\x18\x32 \x01(\t\":\n\x10GameEngineResult\x12&\n\x0bgameengines\x18\x01 \x03(\x0b\x32\x11.proto.GameEngine\"\xb4\x02\n\nGameEngine\x12\n\n\x02id\x18\x01 \x01(\x04\x12!\n\tcompanies\x18\x02 \x03(\x0b\x32\x0e.proto.Company\x12.\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12#\n\x04logo\x18\x05 \x01(\x0b\x32\x15.proto.GameEngineLogo\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\"\n\tplatforms\x18\x07 \x03(\x0b\x32\x0f.proto.Platform\x12\x0c\n\x04slug\x18\x08 \x01(\t\x12.\n\nupdated_at\x18\t \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\n \x01(\t\x12\x10\n\x08\x63hecksum\x18\x0b \x01(\t\"F\n\x14GameEngineLogoResult\x12.\n\x0fgameenginelogos\x18\x01 \x03(\x0b\x32\x15.proto.GameEngineLogo\"\x95\x01\n\x0eGameEngineLogo\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x15\n\ralpha_channel\x18\x02 \x01(\x08\x12\x10\n\x08\x61nimated\x18\x03 \x01(\x08\x12\x0e\n\x06height\x18\x04 \x01(\x05\x12\x10\n\x08image_id\x18\x05 \x01(\t\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\r\n\x05width\x18\x07 \x01(\x05\x12\x10\n\x08\x63hecksum\x18\x08 \x01(\t\"4\n\x0eGameModeResult\x12\"\n\tgamemodes\x18\x01 \x03(\x0b\x32\x0f.proto.GameMode\"\xb1\x01\n\x08GameMode\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04slug\x18\x04 \x01(\t\x12.\n\nupdated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x07 \x01(\t\"=\n\x11GameVersionResult\x12(\n\x0cgameversions\x18\x01 \x03(\x0b\x32\x12.proto.GameVersion\"\xfc\x01\n\x0bGameVersion\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12+\n\x08\x66\x65\x61tures\x18\x03 \x03(\x0b\x32\x19.proto.GameVersionFeature\x12\x19\n\x04game\x18\x04 \x01(\x0b\x32\x0b.proto.Game\x12\x1a\n\x05games\x18\x05 \x03(\x0b\x32\x0b.proto.Game\x12.\n\nupdated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x07 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x08 \x01(\t\"R\n\x18GameVersionFeatureResult\x12\x36\n\x13gameversionfeatures\x18\x01 \x03(\x0b\x32\x19.proto.GameVersionFeature\"\xd1\x01\n\x12GameVersionFeature\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x37\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32%.proto.GameVersionFeatureCategoryEnum\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x10\n\x08position\x18\x04 \x01(\x05\x12\r\n\x05title\x18\x05 \x01(\t\x12.\n\x06values\x18\x06 \x03(\x0b\x32\x1e.proto.GameVersionFeatureValue\x12\x10\n\x08\x63hecksum\x18\x07 \x01(\t\"a\n\x1dGameVersionFeatureValueResult\x12@\n\x18gameversionfeaturevalues\x18\x01 \x03(\x0b\x32\x1e.proto.GameVersionFeatureValue\"\xde\x01\n\x17GameVersionFeatureValue\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x19\n\x04game\x18\x02 \x01(\x0b\x32\x0b.proto.Game\x12/\n\x0cgame_feature\x18\x03 \x01(\x0b\x32\x19.proto.GameVersionFeature\x12K\n\x10included_feature\x18\x04 \x01(\x0e\x32\x31.proto.GameVersionFeatureValueIncludedFeatureEnum\x12\x0c\n\x04note\x18\x05 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x06 \x01(\t\"7\n\x0fGameVideoResult\x12$\n\ngamevideos\x18\x01 \x03(\x0b\x32\x10.proto.GameVideo\"d\n\tGameVideo\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x19\n\x04game\x18\x02 \x01(\x0b\x32\x0b.proto.Game\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x10\n\x08video_id\x18\x04 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x05 \x01(\t\"+\n\x0bGenreResult\x12\x1c\n\x06genres\x18\x01 \x03(\x0b\x32\x0c.proto.Genre\"\xae\x01\n\x05Genre\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04slug\x18\x04 \x01(\t\x12.\n\nupdated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x07 \x01(\t\"J\n\x15InvolvedCompanyResult\x12\x31\n\x11involvedcompanies\x18\x01 \x03(\x0b\x32\x16.proto.InvolvedCompany\"\x96\x02\n\x0fInvolvedCompany\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x1f\n\x07\x63ompany\x18\x02 \x01(\x0b\x32\x0e.proto.Company\x12.\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x11\n\tdeveloper\x18\x04 \x01(\x08\x12\x19\n\x04game\x18\x05 \x01(\x0b\x32\x0b.proto.Game\x12\x0f\n\x07porting\x18\x06 \x01(\x08\x12\x11\n\tpublisher\x18\x07 \x01(\x08\x12\x12\n\nsupporting\x18\x08 \x01(\x08\x12.\n\nupdated_at\x18\t \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x10\n\x08\x63hecksum\x18\n \x01(\t\"1\n\rKeywordResult\x12 \n\x08keywords\x18\x01 \x03(\x0b\x32\x0e.proto.Keyword\"\xb0\x01\n\x07Keyword\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04slug\x18\x04 \x01(\t\x12.\n\nupdated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x07 \x01(\t\"I\n\x15MultiplayerModeResult\x12\x30\n\x10multiplayermodes\x18\x01 \x03(\x0b\x32\x16.proto.MultiplayerMode\"\xd3\x02\n\x0fMultiplayerMode\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x14\n\x0c\x63\x61mpaigncoop\x18\x02 \x01(\x08\x12\x0e\n\x06\x64ropin\x18\x03 \x01(\x08\x12\x19\n\x04game\x18\x04 \x01(\x0b\x32\x0b.proto.Game\x12\x0f\n\x07lancoop\x18\x05 \x01(\x08\x12\x13\n\x0bofflinecoop\x18\x06 \x01(\x08\x12\x16\n\x0eofflinecoopmax\x18\x07 \x01(\x05\x12\x12\n\nofflinemax\x18\x08 \x01(\x05\x12\x12\n\nonlinecoop\x18\t \x01(\x08\x12\x15\n\ronlinecoopmax\x18\n \x01(\x05\x12\x11\n\tonlinemax\x18\x0b \x01(\x05\x12!\n\x08platform\x18\x0c \x01(\x0b\x32\x0f.proto.Platform\x12\x13\n\x0bsplitscreen\x18\r \x01(\x08\x12\x19\n\x11splitscreenonline\x18\x0e \x01(\x08\x12\x10\n\x08\x63hecksum\x18\x0f \x01(\t\"4\n\x0ePlatformResult\x12\"\n\tplatforms\x18\x01 \x03(\x0b\x32\x0f.proto.Platform\"\xe5\x03\n\x08Platform\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x14\n\x0c\x61\x62\x62reviation\x18\x02 \x01(\t\x12\x18\n\x10\x61lternative_name\x18\x03 \x01(\t\x12-\n\x08\x63\x61tegory\x18\x04 \x01(\x0e\x32\x1b.proto.PlatformCategoryEnum\x12.\n\ncreated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x12\n\ngeneration\x18\x06 \x01(\x05\x12\x0c\n\x04name\x18\x07 \x01(\t\x12*\n\rplatform_logo\x18\x08 \x01(\x0b\x32\x13.proto.PlatformLogo\x12.\n\x0fplatform_family\x18\t \x01(\x0b\x32\x15.proto.PlatformFamily\x12\x0c\n\x04slug\x18\n \x01(\t\x12\x0f\n\x07summary\x18\x0b \x01(\t\x12.\n\nupdated_at\x18\x0c \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\r \x01(\t\x12(\n\x08versions\x18\x0e \x03(\x0b\x32\x16.proto.PlatformVersion\x12(\n\x08websites\x18\x0f \x03(\x0b\x32\x16.proto.PlatformWebsite\x12\x10\n\x08\x63hecksum\x18\x10 \x01(\t\"G\n\x14PlatformFamilyResult\x12/\n\x10platformfamilies\x18\x01 \x03(\x0b\x32\x15.proto.PlatformFamily\"J\n\x0ePlatformFamily\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04slug\x18\x03 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x04 \x01(\t\"@\n\x12PlatformLogoResult\x12*\n\rplatformlogos\x18\x01 \x03(\x0b\x32\x13.proto.PlatformLogo\"\x93\x01\n\x0cPlatformLogo\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x15\n\ralpha_channel\x18\x02 \x01(\x08\x12\x10\n\x08\x61nimated\x18\x03 \x01(\x08\x12\x0e\n\x06height\x18\x04 \x01(\x05\x12\x10\n\x08image_id\x18\x05 \x01(\t\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\r\n\x05width\x18\x07 \x01(\x05\x12\x10\n\x08\x63hecksum\x18\x08 \x01(\t\"I\n\x15PlatformVersionResult\x12\x30\n\x10platformversions\x18\x01 \x03(\x0b\x32\x16.proto.PlatformVersion\"\x81\x04\n\x0fPlatformVersion\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x30\n\tcompanies\x18\x02 \x03(\x0b\x32\x1d.proto.PlatformVersionCompany\x12\x14\n\x0c\x63onnectivity\x18\x03 \x01(\t\x12\x0b\n\x03\x63pu\x18\x04 \x01(\t\x12\x10\n\x08graphics\x18\x05 \x01(\t\x12\x38\n\x11main_manufacturer\x18\x06 \x01(\x0b\x32\x1d.proto.PlatformVersionCompany\x12\r\n\x05media\x18\x07 \x01(\t\x12\x0e\n\x06memory\x18\x08 \x01(\t\x12\x0c\n\x04name\x18\t \x01(\t\x12\x0e\n\x06online\x18\n \x01(\t\x12\n\n\x02os\x18\x0b \x01(\t\x12\x0e\n\x06output\x18\x0c \x01(\t\x12*\n\rplatform_logo\x18\r \x01(\x0b\x32\x13.proto.PlatformLogo\x12I\n\x1eplatform_version_release_dates\x18\x0e \x03(\x0b\x32!.proto.PlatformVersionReleaseDate\x12\x13\n\x0bresolutions\x18\x0f \x01(\t\x12\x0c\n\x04slug\x18\x10 \x01(\t\x12\r\n\x05sound\x18\x11 \x01(\t\x12\x0f\n\x07storage\x18\x12 \x01(\t\x12\x0f\n\x07summary\x18\x13 \x01(\t\x12\x0b\n\x03url\x18\x14 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x15 \x01(\t\"_\n\x1cPlatformVersionCompanyResult\x12?\n\x18platformversioncompanies\x18\x01 \x03(\x0b\x32\x1d.proto.PlatformVersionCompany\"\x91\x01\n\x16PlatformVersionCompany\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x0f\n\x07\x63omment\x18\x02 \x01(\t\x12\x1f\n\x07\x63ompany\x18\x03 \x01(\x0b\x32\x0e.proto.Company\x12\x11\n\tdeveloper\x18\x04 \x01(\x08\x12\x14\n\x0cmanufacturer\x18\x05 \x01(\x08\x12\x10\n\x08\x63hecksum\x18\x06 \x01(\t\"j\n PlatformVersionReleaseDateResult\x12\x46\n\x1bplatformversionreleasedates\x18\x01 \x03(\x0b\x32!.proto.PlatformVersionReleaseDate\"\xff\x02\n\x1aPlatformVersionReleaseDate\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x39\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32\'.proto.DateFormatChangeDateCategoryEnum\x12.\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12(\n\x04\x64\x61te\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\r\n\x05human\x18\x05 \x01(\t\x12\t\n\x01m\x18\x06 \x01(\x05\x12\x30\n\x10platform_version\x18\x07 \x01(\x0b\x32\x16.proto.PlatformVersion\x12\'\n\x06region\x18\x08 \x01(\x0e\x32\x17.proto.RegionRegionEnum\x12.\n\nupdated_at\x18\t \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\t\n\x01y\x18\n \x01(\x05\x12\x10\n\x08\x63hecksum\x18\x0b \x01(\t\"I\n\x15PlatformWebsiteResult\x12\x30\n\x10platformwebsites\x18\x01 \x03(\x0b\x32\x16.proto.PlatformWebsite\"{\n\x0fPlatformWebsite\x12\n\n\x02id\x18\x01 \x01(\x04\x12,\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32\x1a.proto.WebsiteCategoryEnum\x12\x0f\n\x07trusted\x18\x03 \x01(\x08\x12\x0b\n\x03url\x18\x04 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x05 \x01(\t\"O\n\x17PlayerPerspectiveResult\x12\x34\n\x12playerperspectives\x18\x01 \x03(\x0b\x32\x18.proto.PlayerPerspective\"\xba\x01\n\x11PlayerPerspective\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04slug\x18\x04 \x01(\t\x12.\n\nupdated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x07 \x01(\t\"=\n\x11ReleaseDateResult\x12(\n\x0creleasedates\x18\x01 \x03(\x0b\x32\x12.proto.ReleaseDate\"\xfc\x02\n\x0bReleaseDate\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x39\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32\'.proto.DateFormatChangeDateCategoryEnum\x12.\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12(\n\x04\x64\x61te\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x19\n\x04game\x18\x05 \x01(\x0b\x32\x0b.proto.Game\x12\r\n\x05human\x18\x06 \x01(\t\x12\t\n\x01m\x18\x07 \x01(\x05\x12!\n\x08platform\x18\x08 \x01(\x0b\x32\x0f.proto.Platform\x12\'\n\x06region\x18\t \x01(\x0e\x32\x17.proto.RegionRegionEnum\x12.\n\nupdated_at\x18\n \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\t\n\x01y\x18\x0b \x01(\x05\x12\x10\n\x08\x63hecksum\x18\x0c \x01(\t\":\n\x10ScreenshotResult\x12&\n\x0bscreenshots\x18\x01 \x03(\x0b\x32\x11.proto.Screenshot\"\xac\x01\n\nScreenshot\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x15\n\ralpha_channel\x18\x02 \x01(\x08\x12\x10\n\x08\x61nimated\x18\x03 \x01(\x08\x12\x19\n\x04game\x18\x04 \x01(\x0b\x32\x0b.proto.Game\x12\x0e\n\x06height\x18\x05 \x01(\x05\x12\x10\n\x08image_id\x18\x06 \x01(\t\x12\x0b\n\x03url\x18\x07 \x01(\t\x12\r\n\x05width\x18\x08 \x01(\x05\x12\x10\n\x08\x63hecksum\x18\t \x01(\t\"/\n\x0cSearchResult\x12\x1f\n\x08searches\x18\x01 \x03(\x0b\x32\r.proto.Search\"\x83\x03\n\x06Search\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x18\n\x10\x61lternative_name\x18\x02 \x01(\t\x12#\n\tcharacter\x18\x03 \x01(\x0b\x32\x10.proto.Character\x12%\n\ncollection\x18\x04 \x01(\x0b\x32\x11.proto.Collection\x12\x1f\n\x07\x63ompany\x18\x05 \x01(\x0b\x32\x0e.proto.Company\x12\x13\n\x0b\x64\x65scription\x18\x06 \x01(\t\x12\x19\n\x04game\x18\x07 \x01(\x0b\x32\x0b.proto.Game\x12\x0c\n\x04name\x18\x08 \x01(\t\x12!\n\x08platform\x18\t \x01(\x0b\x32\x0f.proto.Platform\x12\x30\n\x0cpublished_at\x18\n \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12$\n\ntest_dummy\x18\x0b \x01(\x0b\x32\x10.proto.TestDummy\x12\x1b\n\x05theme\x18\x0c \x01(\x0b\x32\x0c.proto.Theme\x12\x10\n\x08\x63hecksum\x18\r \x01(\t\"8\n\x0fTestDummyResult\x12%\n\x0btestdummies\x18\x01 \x03(\x0b\x32\x10.proto.TestDummy\"\xe5\x03\n\tTestDummy\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x12\n\nbool_value\x18\x02 \x01(\x08\x12.\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12/\n\tenum_test\x18\x04 \x01(\x0e\x32\x1c.proto.TestDummyEnumTestEnum\x12\x13\n\x0b\x66loat_value\x18\x05 \x01(\x01\x12\x19\n\x04game\x18\x06 \x01(\x0b\x32\x0b.proto.Game\x12\x15\n\rinteger_array\x18\x07 \x03(\x05\x12\x15\n\rinteger_value\x18\x08 \x01(\x05\x12\x0c\n\x04name\x18\t \x01(\t\x12\x19\n\x11new_integer_value\x18\n \x01(\x05\x12\x0f\n\x07private\x18\x0b \x01(\x08\x12\x0c\n\x04slug\x18\x0c \x01(\t\x12\x14\n\x0cstring_array\x18\r \x03(\t\x12&\n\x0ctest_dummies\x18\x0e \x03(\x0b\x32\x10.proto.TestDummy\x12$\n\ntest_dummy\x18\x0f \x01(\x0b\x32\x10.proto.TestDummy\x12.\n\nupdated_at\x18\x10 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x11 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x12 \x01(\t\"+\n\x0bThemeResult\x12\x1c\n\x06themes\x18\x01 \x03(\x0b\x32\x0c.proto.Theme\"\xae\x01\n\x05Theme\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04slug\x18\x04 \x01(\t\x12.\n\nupdated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x07 \x01(\t\"1\n\rWebsiteResult\x12 \n\x08websites\x18\x01 \x03(\x0b\x32\x0e.proto.Website\"\x8e\x01\n\x07Website\x12\n\n\x02id\x18\x01 \x01(\x04\x12,\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32\x1a.proto.WebsiteCategoryEnum\x12\x19\n\x04game\x18\x03 \x01(\x0b\x32\x0b.proto.Game\x12\x0f\n\x07trusted\x18\x04 \x01(\x08\x12\x0b\n\x03url\x18\x05 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x06 \x01(\t*H\n\x15\x41geRatingCategoryEnum\x12\x1b\n\x17\x41GERATING_CATEGORY_NULL\x10\x00\x12\x08\n\x04\x45SRB\x10\x01\x12\x08\n\x04PEGI\x10\x02*\xa3\x01\n\x13\x41geRatingRatingEnum\x12\x19\n\x15\x41GERATING_RATING_NULL\x10\x00\x12\t\n\x05THREE\x10\x01\x12\t\n\x05SEVEN\x10\x02\x12\n\n\x06TWELVE\x10\x03\x12\x0b\n\x07SIXTEEN\x10\x04\x12\x0c\n\x08\x45IGHTEEN\x10\x05\x12\x06\n\x02RP\x10\x06\x12\x06\n\x02\x45\x43\x10\x07\x12\x05\n\x01\x45\x10\x08\x12\x07\n\x03\x45\x31\x30\x10\t\x12\x05\n\x01T\x10\n\x12\x05\n\x01M\x10\x0b\x12\x06\n\x02\x41O\x10\x0c*K\n\x10GenderGenderEnum\x12\x16\n\x12GENDER_GENDER_NULL\x10\x00\x12\x08\n\x04MALE\x10\x01\x12\n\n\x06\x46\x45MALE\x10\x02\x12\t\n\x05OTHER\x10\x03*n\n\x14\x43haracterSpeciesEnum\x12\x1a\n\x16\x43HARACTER_SPECIES_NULL\x10\x00\x12\t\n\x05HUMAN\x10\x01\x12\t\n\x05\x41LIEN\x10\x02\x12\n\n\x06\x41NIMAL\x10\x03\x12\x0b\n\x07\x41NDROID\x10\x04\x12\x0b\n\x07UNKNOWN\x10\x05*\x83\x01\n DateFormatChangeDateCategoryEnum\x12\x0e\n\nYYYYMMMMDD\x10\x00\x12\x0c\n\x08YYYYMMMM\x10\x01\x12\x08\n\x04YYYY\x10\x02\x12\n\n\x06YYYYQ1\x10\x03\x12\n\n\x06YYYYQ2\x10\x04\x12\n\n\x06YYYYQ3\x10\x05\x12\n\n\x06YYYYQ4\x10\x06\x12\x07\n\x03TBD\x10\x07*\x8c\x03\n\x13WebsiteCategoryEnum\x12\x19\n\x15WEBSITE_CATEGORY_NULL\x10\x00\x12\x14\n\x10WEBSITE_OFFICIAL\x10\x01\x12\x11\n\rWEBSITE_WIKIA\x10\x02\x12\x15\n\x11WEBSITE_WIKIPEDIA\x10\x03\x12\x14\n\x10WEBSITE_FACEBOOK\x10\x04\x12\x13\n\x0fWEBSITE_TWITTER\x10\x05\x12\x12\n\x0eWEBSITE_TWITCH\x10\x06\x12\x15\n\x11WEBSITE_INSTAGRAM\x10\x08\x12\x13\n\x0fWEBSITE_YOUTUBE\x10\t\x12\x12\n\x0eWEBSITE_IPHONE\x10\n\x12\x10\n\x0cWEBSITE_IPAD\x10\x0b\x12\x13\n\x0fWEBSITE_ANDROID\x10\x0c\x12\x11\n\rWEBSITE_STEAM\x10\r\x12\x12\n\x0eWEBSITE_REDDIT\x10\x0e\x12\x10\n\x0cWEBSITE_ITCH\x10\x0f\x12\x15\n\x11WEBSITE_EPICGAMES\x10\x10\x12\x0f\n\x0bWEBSITE_GOG\x10\x11\x12\x13\n\x0fWEBSITE_DISCORD\x10\x12*\xe9\x01\n\x18\x45xternalGameCategoryEnum\x12\x1e\n\x1a\x45XTERNALGAME_CATEGORY_NULL\x10\x00\x12\x16\n\x12\x45XTERNALGAME_STEAM\x10\x01\x12\x14\n\x10\x45XTERNALGAME_GOG\x10\x05\x12\x18\n\x14\x45XTERNALGAME_YOUTUBE\x10\n\x12\x1a\n\x16\x45XTERNALGAME_MICROSOFT\x10\x0b\x12\x16\n\x12\x45XTERNALGAME_APPLE\x10\r\x12\x17\n\x13\x45XTERNALGAME_TWITCH\x10\x0e\x12\x18\n\x14\x45XTERNALGAME_ANDROID\x10\x0f*i\n\x15\x45xternalGameMediaEnum\x12\x1b\n\x17\x45XTERNALGAME_MEDIA_NULL\x10\x00\x12\x18\n\x14\x45XTERNALGAME_DIGITAL\x10\x01\x12\x19\n\x15\x45XTERNALGAME_PHYSICAL\x10\x02*\x87\x01\n\x10GameCategoryEnum\x12\r\n\tMAIN_GAME\x10\x00\x12\r\n\tDLC_ADDON\x10\x01\x12\r\n\tEXPANSION\x10\x02\x12\n\n\x06\x42UNDLE\x10\x03\x12\x18\n\x14STANDALONE_EXPANSION\x10\x04\x12\x07\n\x03MOD\x10\x05\x12\x0b\n\x07\x45PISODE\x10\x06\x12\n\n\x06SEASON\x10\x07*n\n\x0eGameStatusEnum\x12\x0c\n\x08RELEASED\x10\x00\x12\t\n\x05\x41LPHA\x10\x02\x12\x08\n\x04\x42\x45TA\x10\x03\x12\x10\n\x0c\x45\x41RLY_ACCESS\x10\x04\x12\x0b\n\x07OFFLINE\x10\x05\x12\r\n\tCANCELLED\x10\x06\x12\x0b\n\x07RUMORED\x10\x07*>\n\x1eGameVersionFeatureCategoryEnum\x12\x0b\n\x07\x42OOLEAN\x10\x00\x12\x0f\n\x0b\x44\x45SCRIPTION\x10\x01*`\n*GameVersionFeatureValueIncludedFeatureEnum\x12\x10\n\x0cNOT_INCLUDED\x10\x00\x12\x0c\n\x08INCLUDED\x10\x01\x12\x12\n\x0ePRE_ORDER_ONLY\x10\x02*\x93\x01\n\x14PlatformCategoryEnum\x12\x1a\n\x16PLATFORM_CATEGORY_NULL\x10\x00\x12\x0b\n\x07\x43ONSOLE\x10\x01\x12\n\n\x06\x41RCADE\x10\x02\x12\x0c\n\x08PLATFORM\x10\x03\x12\x14\n\x10OPERATING_SYSTEM\x10\x04\x12\x14\n\x10PORTABLE_CONSOLE\x10\x05\x12\x0c\n\x08\x43OMPUTER\x10\x06*\x98\x01\n\x10RegionRegionEnum\x12\x16\n\x12REGION_REGION_NULL\x10\x00\x12\n\n\x06\x45UROPE\x10\x01\x12\x11\n\rNORTH_AMERICA\x10\x02\x12\r\n\tAUSTRALIA\x10\x03\x12\x0f\n\x0bNEW_ZEALAND\x10\x04\x12\t\n\x05JAPAN\x10\x05\x12\t\n\x05\x43HINA\x10\x06\x12\x08\n\x04\x41SIA\x10\x07\x12\r\n\tWORLDWIDE\x10\x08*K\n\x15TestDummyEnumTestEnum\x12\x1c\n\x18TESTDUMMY_ENUM_TEST_NULL\x10\x00\x12\t\n\x05\x45NUM1\x10\x01\x12\t\n\x05\x45NUM2\x10\x02\x42\x04H\x02P\x01\x62\x06proto3'
+  serialized_pb=b'\n\rigdbapi.proto\x12\x05proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x16\n\x05\x43ount\x12\r\n\x05\x63ount\x18\x01 \x01(\x03\"@\n\x10MultiQueryResult\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07results\x18\x02 \x03(\x0c\x12\r\n\x05\x63ount\x18\x03 \x01(\x03\"@\n\x15MultiQueryResultArray\x12\'\n\x06result\x18\x01 \x03(\x0b\x32\x17.proto.MultiQueryResult\"7\n\x0f\x41geRatingResult\x12$\n\nageratings\x18\x01 \x03(\x0b\x32\x10.proto.AgeRating\"\xf3\x01\n\tAgeRating\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32\x1c.proto.AgeRatingCategoryEnum\x12@\n\x14\x63ontent_descriptions\x18\x03 \x03(\x0b\x32\".proto.AgeRatingContentDescription\x12*\n\x06rating\x18\x04 \x01(\x0e\x32\x1a.proto.AgeRatingRatingEnum\x12\x18\n\x10rating_cover_url\x18\x05 \x01(\t\x12\x10\n\x08synopsis\x18\x06 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x07 \x01(\t\"m\n!AgeRatingContentDescriptionResult\x12H\n\x1c\x61geratingcontentdescriptions\x18\x01 \x03(\x0b\x32\".proto.AgeRatingContentDescription\"~\n\x1b\x41geRatingContentDescription\x12\n\n\x02id\x18\x01 \x01(\x04\x12,\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32\x1a.proto.AgeRatingRatingEnum\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x04 \x01(\t\"I\n\x15\x41lternativeNameResult\x12\x30\n\x10\x61lternativenames\x18\x01 \x03(\x0b\x32\x16.proto.AlternativeName\"i\n\x0f\x41lternativeName\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x0f\n\x07\x63omment\x18\x02 \x01(\t\x12\x19\n\x04game\x18\x03 \x01(\x0b\x32\x0b.proto.Game\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x05 \x01(\t\"1\n\rArtworkResult\x12 \n\x08\x61rtworks\x18\x01 \x03(\x0b\x32\x0e.proto.Artwork\"\xa9\x01\n\x07\x41rtwork\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x15\n\ralpha_channel\x18\x02 \x01(\x08\x12\x10\n\x08\x61nimated\x18\x03 \x01(\x08\x12\x19\n\x04game\x18\x04 \x01(\x0b\x32\x0b.proto.Game\x12\x0e\n\x06height\x18\x05 \x01(\x05\x12\x10\n\x08image_id\x18\x06 \x01(\t\x12\x0b\n\x03url\x18\x07 \x01(\t\x12\r\n\x05width\x18\x08 \x01(\x05\x12\x10\n\x08\x63hecksum\x18\t \x01(\t\"7\n\x0f\x43haracterResult\x12$\n\ncharacters\x18\x01 \x03(\x0b\x32\x10.proto.Character\"\x89\x03\n\tCharacter\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x0c\n\x04\x61kas\x18\x02 \x03(\t\x12\x14\n\x0c\x63ountry_name\x18\x03 \x01(\t\x12.\n\ncreated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x13\n\x0b\x64\x65scription\x18\x05 \x01(\t\x12\x1a\n\x05games\x18\x06 \x03(\x0b\x32\x0b.proto.Game\x12\'\n\x06gender\x18\x07 \x01(\x0e\x32\x17.proto.GenderGenderEnum\x12)\n\x08mug_shot\x18\x08 \x01(\x0b\x32\x17.proto.CharacterMugShot\x12\x0c\n\x04name\x18\t \x01(\t\x12\x0c\n\x04slug\x18\n \x01(\t\x12,\n\x07species\x18\x0b \x01(\x0e\x32\x1b.proto.CharacterSpeciesEnum\x12.\n\nupdated_at\x18\x0c \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\r \x01(\t\x12\x10\n\x08\x63hecksum\x18\x0e \x01(\t\"L\n\x16\x43haracterMugShotResult\x12\x32\n\x11\x63haractermugshots\x18\x01 \x03(\x0b\x32\x17.proto.CharacterMugShot\"\x97\x01\n\x10\x43haracterMugShot\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x15\n\ralpha_channel\x18\x02 \x01(\x08\x12\x10\n\x08\x61nimated\x18\x03 \x01(\x08\x12\x0e\n\x06height\x18\x04 \x01(\x05\x12\x10\n\x08image_id\x18\x05 \x01(\t\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\r\n\x05width\x18\x07 \x01(\x05\x12\x10\n\x08\x63hecksum\x18\x08 \x01(\t\":\n\x10\x43ollectionResult\x12&\n\x0b\x63ollections\x18\x01 \x03(\x0b\x32\x11.proto.Collection\"\xcf\x01\n\nCollection\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x1a\n\x05games\x18\x03 \x03(\x0b\x32\x0b.proto.Game\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x0c\n\x04slug\x18\x05 \x01(\t\x12.\n\nupdated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x07 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x08 \x01(\t\"2\n\rCompanyResult\x12!\n\tcompanies\x18\x01 \x03(\x0b\x32\x0e.proto.Company\"\x9b\x05\n\x07\x43ompany\x12\n\n\x02id\x18\x01 \x01(\x04\x12/\n\x0b\x63hange_date\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x45\n\x14\x63hange_date_category\x18\x03 \x01(\x0e\x32\'.proto.DateFormatChangeDateCategoryEnum\x12*\n\x12\x63hanged_company_id\x18\x04 \x01(\x0b\x32\x0e.proto.Company\x12\x0f\n\x07\x63ountry\x18\x05 \x01(\x05\x12.\n\ncreated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x13\n\x0b\x64\x65scription\x18\x07 \x01(\t\x12\x1e\n\tdeveloped\x18\x08 \x03(\x0b\x32\x0b.proto.Game\x12 \n\x04logo\x18\t \x01(\x0b\x32\x12.proto.CompanyLogo\x12\x0c\n\x04name\x18\n \x01(\t\x12\x1e\n\x06parent\x18\x0b \x01(\x0b\x32\x0e.proto.Company\x12\x1e\n\tpublished\x18\x0c \x03(\x0b\x32\x0b.proto.Game\x12\x0c\n\x04slug\x18\r \x01(\t\x12.\n\nstart_date\x18\x0e \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x44\n\x13start_date_category\x18\x0f \x01(\x0e\x32\'.proto.DateFormatChangeDateCategoryEnum\x12.\n\nupdated_at\x18\x10 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x11 \x01(\t\x12\'\n\x08websites\x18\x12 \x03(\x0b\x32\x15.proto.CompanyWebsite\x12\x10\n\x08\x63hecksum\x18\x13 \x01(\t\"=\n\x11\x43ompanyLogoResult\x12(\n\x0c\x63ompanylogos\x18\x01 \x03(\x0b\x32\x12.proto.CompanyLogo\"\x92\x01\n\x0b\x43ompanyLogo\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x15\n\ralpha_channel\x18\x02 \x01(\x08\x12\x10\n\x08\x61nimated\x18\x03 \x01(\x08\x12\x0e\n\x06height\x18\x04 \x01(\x05\x12\x10\n\x08image_id\x18\x05 \x01(\t\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\r\n\x05width\x18\x07 \x01(\x05\x12\x10\n\x08\x63hecksum\x18\x08 \x01(\t\"F\n\x14\x43ompanyWebsiteResult\x12.\n\x0f\x63ompanywebsites\x18\x01 \x03(\x0b\x32\x15.proto.CompanyWebsite\"z\n\x0e\x43ompanyWebsite\x12\n\n\x02id\x18\x01 \x01(\x04\x12,\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32\x1a.proto.WebsiteCategoryEnum\x12\x0f\n\x07trusted\x18\x03 \x01(\x08\x12\x0b\n\x03url\x18\x04 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x05 \x01(\t\"+\n\x0b\x43overResult\x12\x1c\n\x06\x63overs\x18\x01 \x03(\x0b\x32\x0c.proto.Cover\"\xa7\x01\n\x05\x43over\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x15\n\ralpha_channel\x18\x02 \x01(\x08\x12\x10\n\x08\x61nimated\x18\x03 \x01(\x08\x12\x19\n\x04game\x18\x04 \x01(\x0b\x32\x0b.proto.Game\x12\x0e\n\x06height\x18\x05 \x01(\x05\x12\x10\n\x08image_id\x18\x06 \x01(\t\x12\x0b\n\x03url\x18\x07 \x01(\t\x12\r\n\x05width\x18\x08 \x01(\x05\x12\x10\n\x08\x63hecksum\x18\t \x01(\t\"@\n\x12\x45xternalGameResult\x12*\n\rexternalgames\x18\x01 \x03(\x0b\x32\x13.proto.ExternalGame\"\xf3\x02\n\x0c\x45xternalGame\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x31\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32\x1f.proto.ExternalGameCategoryEnum\x12.\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x19\n\x04game\x18\x04 \x01(\x0b\x32\x0b.proto.Game\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x0b\n\x03uid\x18\x06 \x01(\t\x12.\n\nupdated_at\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x08 \x01(\t\x12\x0c\n\x04year\x18\t \x01(\x05\x12+\n\x05media\x18\n \x01(\x0e\x32\x1c.proto.ExternalGameMediaEnum\x12!\n\x08platform\x18\x0b \x01(\x0b\x32\x0f.proto.Platform\x12\x11\n\tcountries\x18\x0c \x03(\x05\x12\x10\n\x08\x63hecksum\x18\r \x01(\t\"7\n\x0f\x46ranchiseResult\x12$\n\nfranchises\x18\x01 \x03(\x0b\x32\x10.proto.Franchise\"\xce\x01\n\tFranchise\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x1a\n\x05games\x18\x03 \x03(\x0b\x32\x0b.proto.Game\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x0c\n\x04slug\x18\x05 \x01(\t\x12.\n\nupdated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x07 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x08 \x01(\t\"(\n\nGameResult\x12\x1a\n\x05games\x18\x01 \x03(\x0b\x32\x0b.proto.Game\"\xfd\r\n\x04Game\x12\n\n\x02id\x18\x01 \x01(\x04\x12%\n\x0b\x61ge_ratings\x18\x02 \x03(\x0b\x32\x10.proto.AgeRating\x12\x19\n\x11\x61ggregated_rating\x18\x03 \x01(\x01\x12\x1f\n\x17\x61ggregated_rating_count\x18\x04 \x01(\x05\x12\x31\n\x11\x61lternative_names\x18\x05 \x03(\x0b\x32\x16.proto.AlternativeName\x12 \n\x08\x61rtworks\x18\x06 \x03(\x0b\x32\x0e.proto.Artwork\x12\x1c\n\x07\x62undles\x18\x07 \x03(\x0b\x32\x0b.proto.Game\x12)\n\x08\x63\x61tegory\x18\x08 \x01(\x0e\x32\x17.proto.GameCategoryEnum\x12%\n\ncollection\x18\t \x01(\x0b\x32\x11.proto.Collection\x12\x1b\n\x05\x63over\x18\n \x01(\x0b\x32\x0c.proto.Cover\x12.\n\ncreated_at\x18\x0b \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x19\n\x04\x64lcs\x18\x0c \x03(\x0b\x32\x0b.proto.Game\x12\x1f\n\nexpansions\x18\r \x03(\x0b\x32\x0b.proto.Game\x12+\n\x0e\x65xternal_games\x18\x0e \x03(\x0b\x32\x13.proto.ExternalGame\x12\x36\n\x12\x66irst_release_date\x18\x0f \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0f\n\x07\x66ollows\x18\x10 \x01(\x05\x12#\n\tfranchise\x18\x11 \x01(\x0b\x32\x10.proto.Franchise\x12$\n\nfranchises\x18\x12 \x03(\x0b\x32\x10.proto.Franchise\x12\'\n\x0cgame_engines\x18\x13 \x03(\x0b\x32\x11.proto.GameEngine\x12#\n\ngame_modes\x18\x14 \x03(\x0b\x32\x0f.proto.GameMode\x12\x1c\n\x06genres\x18\x15 \x03(\x0b\x32\x0c.proto.Genre\x12\r\n\x05hypes\x18\x16 \x01(\x05\x12\x32\n\x12involved_companies\x18\x17 \x03(\x0b\x32\x16.proto.InvolvedCompany\x12 \n\x08keywords\x18\x18 \x03(\x0b\x32\x0e.proto.Keyword\x12\x31\n\x11multiplayer_modes\x18\x19 \x03(\x0b\x32\x16.proto.MultiplayerMode\x12\x0c\n\x04name\x18\x1a \x01(\t\x12 \n\x0bparent_game\x18\x1b \x01(\x0b\x32\x0b.proto.Game\x12\"\n\tplatforms\x18\x1c \x03(\x0b\x32\x0f.proto.Platform\x12\x35\n\x13player_perspectives\x18\x1d \x03(\x0b\x32\x18.proto.PlayerPerspective\x12\x0e\n\x06rating\x18\x1e \x01(\x01\x12\x14\n\x0crating_count\x18\x1f \x01(\x05\x12)\n\rrelease_dates\x18  \x03(\x0b\x32\x12.proto.ReleaseDate\x12&\n\x0bscreenshots\x18! \x03(\x0b\x32\x11.proto.Screenshot\x12\"\n\rsimilar_games\x18\" \x03(\x0b\x32\x0b.proto.Game\x12\x0c\n\x04slug\x18# \x01(\t\x12*\n\x15standalone_expansions\x18$ \x03(\x0b\x32\x0b.proto.Game\x12%\n\x06status\x18% \x01(\x0e\x32\x15.proto.GameStatusEnum\x12\x11\n\tstoryline\x18& \x01(\t\x12\x0f\n\x07summary\x18\' \x01(\t\x12\x0c\n\x04tags\x18( \x03(\x05\x12\x1c\n\x06themes\x18) \x03(\x0b\x32\x0c.proto.Theme\x12\x14\n\x0ctotal_rating\x18* \x01(\x01\x12\x1a\n\x12total_rating_count\x18+ \x01(\x05\x12.\n\nupdated_at\x18, \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18- \x01(\t\x12#\n\x0eversion_parent\x18. \x01(\x0b\x32\x0b.proto.Game\x12\x15\n\rversion_title\x18/ \x01(\t\x12 \n\x06videos\x18\x30 \x03(\x0b\x32\x10.proto.GameVideo\x12 \n\x08websites\x18\x31 \x03(\x0b\x32\x0e.proto.Website\x12\x10\n\x08\x63hecksum\x18\x32 \x01(\t\x12\x1c\n\x07remakes\x18\x33 \x03(\x0b\x32\x0b.proto.Game\x12\x1e\n\tremasters\x18\x34 \x03(\x0b\x32\x0b.proto.Game\x12#\n\x0e\x65xpanded_games\x18\x35 \x03(\x0b\x32\x0b.proto.Game\x12\x1a\n\x05ports\x18\x36 \x03(\x0b\x32\x0b.proto.Game\x12\x1a\n\x05\x66orks\x18\x37 \x03(\x0b\x32\x0b.proto.Game\":\n\x10GameEngineResult\x12&\n\x0bgameengines\x18\x01 \x03(\x0b\x32\x11.proto.GameEngine\"\xb4\x02\n\nGameEngine\x12\n\n\x02id\x18\x01 \x01(\x04\x12!\n\tcompanies\x18\x02 \x03(\x0b\x32\x0e.proto.Company\x12.\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12#\n\x04logo\x18\x05 \x01(\x0b\x32\x15.proto.GameEngineLogo\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\"\n\tplatforms\x18\x07 \x03(\x0b\x32\x0f.proto.Platform\x12\x0c\n\x04slug\x18\x08 \x01(\t\x12.\n\nupdated_at\x18\t \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\n \x01(\t\x12\x10\n\x08\x63hecksum\x18\x0b \x01(\t\"F\n\x14GameEngineLogoResult\x12.\n\x0fgameenginelogos\x18\x01 \x03(\x0b\x32\x15.proto.GameEngineLogo\"\x95\x01\n\x0eGameEngineLogo\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x15\n\ralpha_channel\x18\x02 \x01(\x08\x12\x10\n\x08\x61nimated\x18\x03 \x01(\x08\x12\x0e\n\x06height\x18\x04 \x01(\x05\x12\x10\n\x08image_id\x18\x05 \x01(\t\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\r\n\x05width\x18\x07 \x01(\x05\x12\x10\n\x08\x63hecksum\x18\x08 \x01(\t\"4\n\x0eGameModeResult\x12\"\n\tgamemodes\x18\x01 \x03(\x0b\x32\x0f.proto.GameMode\"\xb1\x01\n\x08GameMode\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04slug\x18\x04 \x01(\t\x12.\n\nupdated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x07 \x01(\t\"=\n\x11GameVersionResult\x12(\n\x0cgameversions\x18\x01 \x03(\x0b\x32\x12.proto.GameVersion\"\xfc\x01\n\x0bGameVersion\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12+\n\x08\x66\x65\x61tures\x18\x03 \x03(\x0b\x32\x19.proto.GameVersionFeature\x12\x19\n\x04game\x18\x04 \x01(\x0b\x32\x0b.proto.Game\x12\x1a\n\x05games\x18\x05 \x03(\x0b\x32\x0b.proto.Game\x12.\n\nupdated_at\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x07 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x08 \x01(\t\"R\n\x18GameVersionFeatureResult\x12\x36\n\x13gameversionfeatures\x18\x01 \x03(\x0b\x32\x19.proto.GameVersionFeature\"\xd1\x01\n\x12GameVersionFeature\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x37\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32%.proto.GameVersionFeatureCategoryEnum\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x10\n\x08position\x18\x04 \x01(\x05\x12\r\n\x05title\x18\x05 \x01(\t\x12.\n\x06values\x18\x06 \x03(\x0b\x32\x1e.proto.GameVersionFeatureValue\x12\x10\n\x08\x63hecksum\x18\x07 \x01(\t\"a\n\x1dGameVersionFeatureValueResult\x12@\n\x18gameversionfeaturevalues\x18\x01 \x03(\x0b\x32\x1e.proto.GameVersionFeatureValue\"\xde\x01\n\x17GameVersionFeatureValue\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x19\n\x04game\x18\x02 \x01(\x0b\x32\x0b.proto.Game\x12/\n\x0cgame_feature\x18\x03 \x01(\x0b\x32\x19.proto.GameVersionFeature\x12K\n\x10included_feature\x18\x04 \x01(\x0e\x32\x31.proto.GameVersionFeatureValueIncludedFeatureEnum\x12\x0c\n\x04note\x18\x05 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x06 \x01(\t\"7\n\x0fGameVideoResult\x12$\n\ngamevideos\x18\x01 \x03(\x0b\x32\x10.proto.GameVideo\"d\n\tGameVideo\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x19\n\x04game\x18\x02 \x01(\x0b\x32\x0b.proto.Game\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x10\n\x08video_id\x18\x04 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x05 \x01(\t\"+\n\x0bGenreResult\x12\x1c\n\x06genres\x18\x01 \x03(\x0b\x32\x0c.proto.Genre\"\xae\x01\n\x05Genre\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04slug\x18\x04 \x01(\t\x12.\n\nupdated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x07 \x01(\t\"J\n\x15InvolvedCompanyResult\x12\x31\n\x11involvedcompanies\x18\x01 \x03(\x0b\x32\x16.proto.InvolvedCompany\"\x96\x02\n\x0fInvolvedCompany\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x1f\n\x07\x63ompany\x18\x02 \x01(\x0b\x32\x0e.proto.Company\x12.\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x11\n\tdeveloper\x18\x04 \x01(\x08\x12\x19\n\x04game\x18\x05 \x01(\x0b\x32\x0b.proto.Game\x12\x0f\n\x07porting\x18\x06 \x01(\x08\x12\x11\n\tpublisher\x18\x07 \x01(\x08\x12\x12\n\nsupporting\x18\x08 \x01(\x08\x12.\n\nupdated_at\x18\t \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x10\n\x08\x63hecksum\x18\n \x01(\t\"1\n\rKeywordResult\x12 \n\x08keywords\x18\x01 \x03(\x0b\x32\x0e.proto.Keyword\"\xb0\x01\n\x07Keyword\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04slug\x18\x04 \x01(\t\x12.\n\nupdated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x07 \x01(\t\"I\n\x15MultiplayerModeResult\x12\x30\n\x10multiplayermodes\x18\x01 \x03(\x0b\x32\x16.proto.MultiplayerMode\"\xd3\x02\n\x0fMultiplayerMode\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x14\n\x0c\x63\x61mpaigncoop\x18\x02 \x01(\x08\x12\x0e\n\x06\x64ropin\x18\x03 \x01(\x08\x12\x19\n\x04game\x18\x04 \x01(\x0b\x32\x0b.proto.Game\x12\x0f\n\x07lancoop\x18\x05 \x01(\x08\x12\x13\n\x0bofflinecoop\x18\x06 \x01(\x08\x12\x16\n\x0eofflinecoopmax\x18\x07 \x01(\x05\x12\x12\n\nofflinemax\x18\x08 \x01(\x05\x12\x12\n\nonlinecoop\x18\t \x01(\x08\x12\x15\n\ronlinecoopmax\x18\n \x01(\x05\x12\x11\n\tonlinemax\x18\x0b \x01(\x05\x12!\n\x08platform\x18\x0c \x01(\x0b\x32\x0f.proto.Platform\x12\x13\n\x0bsplitscreen\x18\r \x01(\x08\x12\x19\n\x11splitscreenonline\x18\x0e \x01(\x08\x12\x10\n\x08\x63hecksum\x18\x0f \x01(\t\"4\n\x0ePlatformResult\x12\"\n\tplatforms\x18\x01 \x03(\x0b\x32\x0f.proto.Platform\"\xe5\x03\n\x08Platform\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x14\n\x0c\x61\x62\x62reviation\x18\x02 \x01(\t\x12\x18\n\x10\x61lternative_name\x18\x03 \x01(\t\x12-\n\x08\x63\x61tegory\x18\x04 \x01(\x0e\x32\x1b.proto.PlatformCategoryEnum\x12.\n\ncreated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x12\n\ngeneration\x18\x06 \x01(\x05\x12\x0c\n\x04name\x18\x07 \x01(\t\x12*\n\rplatform_logo\x18\x08 \x01(\x0b\x32\x13.proto.PlatformLogo\x12.\n\x0fplatform_family\x18\t \x01(\x0b\x32\x15.proto.PlatformFamily\x12\x0c\n\x04slug\x18\n \x01(\t\x12\x0f\n\x07summary\x18\x0b \x01(\t\x12.\n\nupdated_at\x18\x0c \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\r \x01(\t\x12(\n\x08versions\x18\x0e \x03(\x0b\x32\x16.proto.PlatformVersion\x12(\n\x08websites\x18\x0f \x03(\x0b\x32\x16.proto.PlatformWebsite\x12\x10\n\x08\x63hecksum\x18\x10 \x01(\t\"G\n\x14PlatformFamilyResult\x12/\n\x10platformfamilies\x18\x01 \x03(\x0b\x32\x15.proto.PlatformFamily\"J\n\x0ePlatformFamily\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04slug\x18\x03 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x04 \x01(\t\"@\n\x12PlatformLogoResult\x12*\n\rplatformlogos\x18\x01 \x03(\x0b\x32\x13.proto.PlatformLogo\"\x93\x01\n\x0cPlatformLogo\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x15\n\ralpha_channel\x18\x02 \x01(\x08\x12\x10\n\x08\x61nimated\x18\x03 \x01(\x08\x12\x0e\n\x06height\x18\x04 \x01(\x05\x12\x10\n\x08image_id\x18\x05 \x01(\t\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\r\n\x05width\x18\x07 \x01(\x05\x12\x10\n\x08\x63hecksum\x18\x08 \x01(\t\"I\n\x15PlatformVersionResult\x12\x30\n\x10platformversions\x18\x01 \x03(\x0b\x32\x16.proto.PlatformVersion\"\x81\x04\n\x0fPlatformVersion\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x30\n\tcompanies\x18\x02 \x03(\x0b\x32\x1d.proto.PlatformVersionCompany\x12\x14\n\x0c\x63onnectivity\x18\x03 \x01(\t\x12\x0b\n\x03\x63pu\x18\x04 \x01(\t\x12\x10\n\x08graphics\x18\x05 \x01(\t\x12\x38\n\x11main_manufacturer\x18\x06 \x01(\x0b\x32\x1d.proto.PlatformVersionCompany\x12\r\n\x05media\x18\x07 \x01(\t\x12\x0e\n\x06memory\x18\x08 \x01(\t\x12\x0c\n\x04name\x18\t \x01(\t\x12\x0e\n\x06online\x18\n \x01(\t\x12\n\n\x02os\x18\x0b \x01(\t\x12\x0e\n\x06output\x18\x0c \x01(\t\x12*\n\rplatform_logo\x18\r \x01(\x0b\x32\x13.proto.PlatformLogo\x12I\n\x1eplatform_version_release_dates\x18\x0e \x03(\x0b\x32!.proto.PlatformVersionReleaseDate\x12\x13\n\x0bresolutions\x18\x0f \x01(\t\x12\x0c\n\x04slug\x18\x10 \x01(\t\x12\r\n\x05sound\x18\x11 \x01(\t\x12\x0f\n\x07storage\x18\x12 \x01(\t\x12\x0f\n\x07summary\x18\x13 \x01(\t\x12\x0b\n\x03url\x18\x14 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x15 \x01(\t\"_\n\x1cPlatformVersionCompanyResult\x12?\n\x18platformversioncompanies\x18\x01 \x03(\x0b\x32\x1d.proto.PlatformVersionCompany\"\x91\x01\n\x16PlatformVersionCompany\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x0f\n\x07\x63omment\x18\x02 \x01(\t\x12\x1f\n\x07\x63ompany\x18\x03 \x01(\x0b\x32\x0e.proto.Company\x12\x11\n\tdeveloper\x18\x04 \x01(\x08\x12\x14\n\x0cmanufacturer\x18\x05 \x01(\x08\x12\x10\n\x08\x63hecksum\x18\x06 \x01(\t\"j\n PlatformVersionReleaseDateResult\x12\x46\n\x1bplatformversionreleasedates\x18\x01 \x03(\x0b\x32!.proto.PlatformVersionReleaseDate\"\xff\x02\n\x1aPlatformVersionReleaseDate\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x39\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32\'.proto.DateFormatChangeDateCategoryEnum\x12.\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12(\n\x04\x64\x61te\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\r\n\x05human\x18\x05 \x01(\t\x12\t\n\x01m\x18\x06 \x01(\x05\x12\x30\n\x10platform_version\x18\x07 \x01(\x0b\x32\x16.proto.PlatformVersion\x12\'\n\x06region\x18\x08 \x01(\x0e\x32\x17.proto.RegionRegionEnum\x12.\n\nupdated_at\x18\t \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\t\n\x01y\x18\n \x01(\x05\x12\x10\n\x08\x63hecksum\x18\x0b \x01(\t\"I\n\x15PlatformWebsiteResult\x12\x30\n\x10platformwebsites\x18\x01 \x03(\x0b\x32\x16.proto.PlatformWebsite\"{\n\x0fPlatformWebsite\x12\n\n\x02id\x18\x01 \x01(\x04\x12,\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32\x1a.proto.WebsiteCategoryEnum\x12\x0f\n\x07trusted\x18\x03 \x01(\x08\x12\x0b\n\x03url\x18\x04 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x05 \x01(\t\"O\n\x17PlayerPerspectiveResult\x12\x34\n\x12playerperspectives\x18\x01 \x03(\x0b\x32\x18.proto.PlayerPerspective\"\xba\x01\n\x11PlayerPerspective\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04slug\x18\x04 \x01(\t\x12.\n\nupdated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x07 \x01(\t\"=\n\x11ReleaseDateResult\x12(\n\x0creleasedates\x18\x01 \x03(\x0b\x32\x12.proto.ReleaseDate\"\xfc\x02\n\x0bReleaseDate\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x39\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32\'.proto.DateFormatChangeDateCategoryEnum\x12.\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12(\n\x04\x64\x61te\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x19\n\x04game\x18\x05 \x01(\x0b\x32\x0b.proto.Game\x12\r\n\x05human\x18\x06 \x01(\t\x12\t\n\x01m\x18\x07 \x01(\x05\x12!\n\x08platform\x18\x08 \x01(\x0b\x32\x0f.proto.Platform\x12\'\n\x06region\x18\t \x01(\x0e\x32\x17.proto.RegionRegionEnum\x12.\n\nupdated_at\x18\n \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\t\n\x01y\x18\x0b \x01(\x05\x12\x10\n\x08\x63hecksum\x18\x0c \x01(\t\":\n\x10ScreenshotResult\x12&\n\x0bscreenshots\x18\x01 \x03(\x0b\x32\x11.proto.Screenshot\"\xac\x01\n\nScreenshot\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x15\n\ralpha_channel\x18\x02 \x01(\x08\x12\x10\n\x08\x61nimated\x18\x03 \x01(\x08\x12\x19\n\x04game\x18\x04 \x01(\x0b\x32\x0b.proto.Game\x12\x0e\n\x06height\x18\x05 \x01(\x05\x12\x10\n\x08image_id\x18\x06 \x01(\t\x12\x0b\n\x03url\x18\x07 \x01(\t\x12\r\n\x05width\x18\x08 \x01(\x05\x12\x10\n\x08\x63hecksum\x18\t \x01(\t\"/\n\x0cSearchResult\x12\x1f\n\x08searches\x18\x01 \x03(\x0b\x32\r.proto.Search\"\x83\x03\n\x06Search\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x18\n\x10\x61lternative_name\x18\x02 \x01(\t\x12#\n\tcharacter\x18\x03 \x01(\x0b\x32\x10.proto.Character\x12%\n\ncollection\x18\x04 \x01(\x0b\x32\x11.proto.Collection\x12\x1f\n\x07\x63ompany\x18\x05 \x01(\x0b\x32\x0e.proto.Company\x12\x13\n\x0b\x64\x65scription\x18\x06 \x01(\t\x12\x19\n\x04game\x18\x07 \x01(\x0b\x32\x0b.proto.Game\x12\x0c\n\x04name\x18\x08 \x01(\t\x12!\n\x08platform\x18\t \x01(\x0b\x32\x0f.proto.Platform\x12\x30\n\x0cpublished_at\x18\n \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12$\n\ntest_dummy\x18\x0b \x01(\x0b\x32\x10.proto.TestDummy\x12\x1b\n\x05theme\x18\x0c \x01(\x0b\x32\x0c.proto.Theme\x12\x10\n\x08\x63hecksum\x18\r \x01(\t\"8\n\x0fTestDummyResult\x12%\n\x0btestdummies\x18\x01 \x03(\x0b\x32\x10.proto.TestDummy\"\xe5\x03\n\tTestDummy\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x12\n\nbool_value\x18\x02 \x01(\x08\x12.\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12/\n\tenum_test\x18\x04 \x01(\x0e\x32\x1c.proto.TestDummyEnumTestEnum\x12\x13\n\x0b\x66loat_value\x18\x05 \x01(\x01\x12\x19\n\x04game\x18\x06 \x01(\x0b\x32\x0b.proto.Game\x12\x15\n\rinteger_array\x18\x07 \x03(\x05\x12\x15\n\rinteger_value\x18\x08 \x01(\x05\x12\x0c\n\x04name\x18\t \x01(\t\x12\x19\n\x11new_integer_value\x18\n \x01(\x05\x12\x0f\n\x07private\x18\x0b \x01(\x08\x12\x0c\n\x04slug\x18\x0c \x01(\t\x12\x14\n\x0cstring_array\x18\r \x03(\t\x12&\n\x0ctest_dummies\x18\x0e \x03(\x0b\x32\x10.proto.TestDummy\x12$\n\ntest_dummy\x18\x0f \x01(\x0b\x32\x10.proto.TestDummy\x12.\n\nupdated_at\x18\x10 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x11 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x12 \x01(\t\"+\n\x0bThemeResult\x12\x1c\n\x06themes\x18\x01 \x03(\x0b\x32\x0c.proto.Theme\"\xae\x01\n\x05Theme\x12\n\n\x02id\x18\x01 \x01(\x04\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04slug\x18\x04 \x01(\t\x12.\n\nupdated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x07 \x01(\t\"1\n\rWebsiteResult\x12 \n\x08websites\x18\x01 \x03(\x0b\x32\x0e.proto.Website\"\x8e\x01\n\x07Website\x12\n\n\x02id\x18\x01 \x01(\x04\x12,\n\x08\x63\x61tegory\x18\x02 \x01(\x0e\x32\x1a.proto.WebsiteCategoryEnum\x12\x19\n\x04game\x18\x03 \x01(\x0b\x32\x0b.proto.Game\x12\x0f\n\x07trusted\x18\x04 \x01(\x08\x12\x0b\n\x03url\x18\x05 \x01(\t\x12\x10\n\x08\x63hecksum\x18\x06 \x01(\t*}\n\x15\x41geRatingCategoryEnum\x12\x1b\n\x17\x41GERATING_CATEGORY_NULL\x10\x00\x12\x08\n\x04\x45SRB\x10\x01\x12\x08\n\x04PEGI\x10\x02\x12\x08\n\x04\x43\x45RO\x10\x03\x12\x07\n\x03USK\x10\x04\x12\x08\n\x04GRAC\x10\x05\x12\r\n\tCLASS_IND\x10\x06\x12\x07\n\x03\x41\x43\x42\x10\x07*\xad\x04\n\x13\x41geRatingRatingEnum\x12\x19\n\x15\x41GERATING_RATING_NULL\x10\x00\x12\t\n\x05THREE\x10\x01\x12\t\n\x05SEVEN\x10\x02\x12\n\n\x06TWELVE\x10\x03\x12\x0b\n\x07SIXTEEN\x10\x04\x12\x0c\n\x08\x45IGHTEEN\x10\x05\x12\x06\n\x02RP\x10\x06\x12\x06\n\x02\x45\x43\x10\x07\x12\x05\n\x01\x45\x10\x08\x12\x07\n\x03\x45\x31\x30\x10\t\x12\x05\n\x01T\x10\n\x12\x05\n\x01M\x10\x0b\x12\x06\n\x02\x41O\x10\x0c\x12\n\n\x06\x43\x45RO_A\x10\r\x12\n\n\x06\x43\x45RO_B\x10\x0e\x12\n\n\x06\x43\x45RO_C\x10\x0f\x12\n\n\x06\x43\x45RO_D\x10\x10\x12\n\n\x06\x43\x45RO_Z\x10\x11\x12\t\n\x05USK_0\x10\x12\x12\t\n\x05USK_6\x10\x13\x12\n\n\x06USK_12\x10\x14\x12\n\n\x06USK_18\x10\x15\x12\x0c\n\x08GRAC_ALL\x10\x16\x12\x0f\n\x0bGRAC_TWELVE\x10\x17\x12\x10\n\x0cGRAC_FIFTEEN\x10\x18\x12\x11\n\rGRAC_EIGHTEEN\x10\x19\x12\x10\n\x0cGRAC_TESTING\x10\x1a\x12\x0f\n\x0b\x43LASS_IND_L\x10\x1b\x12\x11\n\rCLASS_IND_TEN\x10\x1c\x12\x14\n\x10\x43LASS_IND_TWELVE\x10\x1d\x12\x16\n\x12\x43LASS_IND_FOURTEEN\x10\x1e\x12\x15\n\x11\x43LASS_IND_SIXTEEN\x10\x1f\x12\x16\n\x12\x43LASS_IND_EIGHTEEN\x10 \x12\t\n\x05\x41\x43\x42_G\x10!\x12\n\n\x06\x41\x43\x42_PG\x10\"\x12\t\n\x05\x41\x43\x42_M\x10#\x12\x0c\n\x08\x41\x43\x42_MA15\x10$\x12\x0b\n\x07\x41\x43\x42_R18\x10%\x12\n\n\x06\x41\x43\x42_RC\x10&*3\n\x10GenderGenderEnum\x12\x08\n\x04MALE\x10\x00\x12\n\n\x06\x46\x45MALE\x10\x01\x12\t\n\x05OTHER\x10\x02*n\n\x14\x43haracterSpeciesEnum\x12\x1a\n\x16\x43HARACTER_SPECIES_NULL\x10\x00\x12\t\n\x05HUMAN\x10\x01\x12\t\n\x05\x41LIEN\x10\x02\x12\n\n\x06\x41NIMAL\x10\x03\x12\x0b\n\x07\x41NDROID\x10\x04\x12\x0b\n\x07UNKNOWN\x10\x05*\x83\x01\n DateFormatChangeDateCategoryEnum\x12\x0e\n\nYYYYMMMMDD\x10\x00\x12\x0c\n\x08YYYYMMMM\x10\x01\x12\x08\n\x04YYYY\x10\x02\x12\n\n\x06YYYYQ1\x10\x03\x12\n\n\x06YYYYQ2\x10\x04\x12\n\n\x06YYYYQ3\x10\x05\x12\n\n\x06YYYYQ4\x10\x06\x12\x07\n\x03TBD\x10\x07*\x8c\x03\n\x13WebsiteCategoryEnum\x12\x19\n\x15WEBSITE_CATEGORY_NULL\x10\x00\x12\x14\n\x10WEBSITE_OFFICIAL\x10\x01\x12\x11\n\rWEBSITE_WIKIA\x10\x02\x12\x15\n\x11WEBSITE_WIKIPEDIA\x10\x03\x12\x14\n\x10WEBSITE_FACEBOOK\x10\x04\x12\x13\n\x0fWEBSITE_TWITTER\x10\x05\x12\x12\n\x0eWEBSITE_TWITCH\x10\x06\x12\x15\n\x11WEBSITE_INSTAGRAM\x10\x08\x12\x13\n\x0fWEBSITE_YOUTUBE\x10\t\x12\x12\n\x0eWEBSITE_IPHONE\x10\n\x12\x10\n\x0cWEBSITE_IPAD\x10\x0b\x12\x13\n\x0fWEBSITE_ANDROID\x10\x0c\x12\x11\n\rWEBSITE_STEAM\x10\r\x12\x12\n\x0eWEBSITE_REDDIT\x10\x0e\x12\x10\n\x0cWEBSITE_ITCH\x10\x0f\x12\x15\n\x11WEBSITE_EPICGAMES\x10\x10\x12\x0f\n\x0bWEBSITE_GOG\x10\x11\x12\x13\n\x0fWEBSITE_DISCORD\x10\x12*\xfd\x02\n\x18\x45xternalGameCategoryEnum\x12\x1e\n\x1a\x45XTERNALGAME_CATEGORY_NULL\x10\x00\x12\x16\n\x12\x45XTERNALGAME_STEAM\x10\x01\x12\x14\n\x10\x45XTERNALGAME_GOG\x10\x05\x12\x18\n\x14\x45XTERNALGAME_YOUTUBE\x10\n\x12\x1a\n\x16\x45XTERNALGAME_MICROSOFT\x10\x0b\x12\x16\n\x12\x45XTERNALGAME_APPLE\x10\r\x12\x17\n\x13\x45XTERNALGAME_TWITCH\x10\x0e\x12\x18\n\x14\x45XTERNALGAME_ANDROID\x10\x0f\x12\x1c\n\x18\x45XTERNALGAME_AMAZON_ASIN\x10\x14\x12\x1c\n\x18\x45XTERNALGAME_AMAZON_LUNA\x10\x16\x12\x1b\n\x17\x45XTERNALGAME_AMAZON_ADG\x10\x17\x12 \n\x1c\x45XTERNALGAME_EPIC_GAME_STORE\x10\x1a\x12\x17\n\x13\x45XTERNALGAME_OCULUS\x10\x1c*i\n\x15\x45xternalGameMediaEnum\x12\x1b\n\x17\x45XTERNALGAME_MEDIA_NULL\x10\x00\x12\x18\n\x14\x45XTERNALGAME_DIGITAL\x10\x01\x12\x19\n\x15\x45XTERNALGAME_PHYSICAL\x10\x02*\xc8\x01\n\x10GameCategoryEnum\x12\r\n\tMAIN_GAME\x10\x00\x12\r\n\tDLC_ADDON\x10\x01\x12\r\n\tEXPANSION\x10\x02\x12\n\n\x06\x42UNDLE\x10\x03\x12\x18\n\x14STANDALONE_EXPANSION\x10\x04\x12\x07\n\x03MOD\x10\x05\x12\x0b\n\x07\x45PISODE\x10\x06\x12\n\n\x06SEASON\x10\x07\x12\n\n\x06REMAKE\x10\x08\x12\x0c\n\x08REMASTER\x10\t\x12\x11\n\rEXPANDED_GAME\x10\n\x12\x08\n\x04PORT\x10\x0b\x12\x08\n\x04\x46ORK\x10\x0c*|\n\x0eGameStatusEnum\x12\x0c\n\x08RELEASED\x10\x00\x12\t\n\x05\x41LPHA\x10\x02\x12\x08\n\x04\x42\x45TA\x10\x03\x12\x10\n\x0c\x45\x41RLY_ACCESS\x10\x04\x12\x0b\n\x07OFFLINE\x10\x05\x12\r\n\tCANCELLED\x10\x06\x12\x0b\n\x07RUMORED\x10\x07\x12\x0c\n\x08\x44\x45LISTED\x10\x08*>\n\x1eGameVersionFeatureCategoryEnum\x12\x0b\n\x07\x42OOLEAN\x10\x00\x12\x0f\n\x0b\x44\x45SCRIPTION\x10\x01*`\n*GameVersionFeatureValueIncludedFeatureEnum\x12\x10\n\x0cNOT_INCLUDED\x10\x00\x12\x0c\n\x08INCLUDED\x10\x01\x12\x12\n\x0ePRE_ORDER_ONLY\x10\x02*\x93\x01\n\x14PlatformCategoryEnum\x12\x1a\n\x16PLATFORM_CATEGORY_NULL\x10\x00\x12\x0b\n\x07\x43ONSOLE\x10\x01\x12\n\n\x06\x41RCADE\x10\x02\x12\x0c\n\x08PLATFORM\x10\x03\x12\x14\n\x10OPERATING_SYSTEM\x10\x04\x12\x14\n\x10PORTABLE_CONSOLE\x10\x05\x12\x0c\n\x08\x43OMPUTER\x10\x06*\xaf\x01\n\x10RegionRegionEnum\x12\x16\n\x12REGION_REGION_NULL\x10\x00\x12\n\n\x06\x45UROPE\x10\x01\x12\x11\n\rNORTH_AMERICA\x10\x02\x12\r\n\tAUSTRALIA\x10\x03\x12\x0f\n\x0bNEW_ZEALAND\x10\x04\x12\t\n\x05JAPAN\x10\x05\x12\t\n\x05\x43HINA\x10\x06\x12\x08\n\x04\x41SIA\x10\x07\x12\r\n\tWORLDWIDE\x10\x08\x12\t\n\x05KOREA\x10\t\x12\n\n\x06\x42RAZIL\x10\n*K\n\x15TestDummyEnumTestEnum\x12\x1c\n\x18TESTDUMMY_ENUM_TEST_NULL\x10\x00\x12\t\n\x05\x45NUM1\x10\x01\x12\t\n\x05\x45NUM2\x10\x02\x42\x04H\x02P\x01\x62\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -47,11 +47,36 @@ _AGERATINGCATEGORYENUM = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CERO', index=3, number=3,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='USK', index=4, number=4,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GRAC', index=5, number=5,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CLASS_IND', index=6, number=6,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ACB', index=7, number=7,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=13788,
-  serialized_end=13860,
+  serialized_start=13943,
+  serialized_end=14068,
 )
 _sym_db.RegisterEnumDescriptor(_AGERATINGCATEGORYENUM)
 
@@ -128,11 +153,141 @@ _AGERATINGRATINGENUM = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CERO_A', index=13, number=13,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CERO_B', index=14, number=14,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CERO_C', index=15, number=15,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CERO_D', index=16, number=16,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CERO_Z', index=17, number=17,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='USK_0', index=18, number=18,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='USK_6', index=19, number=19,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='USK_12', index=20, number=20,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='USK_18', index=21, number=21,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GRAC_ALL', index=22, number=22,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GRAC_TWELVE', index=23, number=23,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GRAC_FIFTEEN', index=24, number=24,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GRAC_EIGHTEEN', index=25, number=25,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GRAC_TESTING', index=26, number=26,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CLASS_IND_L', index=27, number=27,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CLASS_IND_TEN', index=28, number=28,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CLASS_IND_TWELVE', index=29, number=29,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CLASS_IND_FOURTEEN', index=30, number=30,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CLASS_IND_SIXTEEN', index=31, number=31,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='CLASS_IND_EIGHTEEN', index=32, number=32,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ACB_G', index=33, number=33,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ACB_PG', index=34, number=34,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ACB_M', index=35, number=35,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ACB_MA15', index=36, number=36,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ACB_R18', index=37, number=37,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ACB_RC', index=38, number=38,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=13863,
-  serialized_end=14026,
+  serialized_start=14071,
+  serialized_end=14628,
 )
 _sym_db.RegisterEnumDescriptor(_AGERATINGRATINGENUM)
 
@@ -145,30 +300,25 @@ _GENDERGENDERENUM = _descriptor.EnumDescriptor(
   create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='GENDER_GENDER_NULL', index=0, number=0,
+      name='MALE', index=0, number=0,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='MALE', index=1, number=1,
+      name='FEMALE', index=1, number=1,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
-      name='FEMALE', index=2, number=2,
-      serialized_options=None,
-      type=None,
-      create_key=_descriptor._internal_create_key),
-    _descriptor.EnumValueDescriptor(
-      name='OTHER', index=3, number=3,
+      name='OTHER', index=2, number=2,
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=14028,
-  serialized_end=14103,
+  serialized_start=14630,
+  serialized_end=14681,
 )
 _sym_db.RegisterEnumDescriptor(_GENDERGENDERENUM)
 
@@ -213,8 +363,8 @@ _CHARACTERSPECIESENUM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=14105,
-  serialized_end=14215,
+  serialized_start=14683,
+  serialized_end=14793,
 )
 _sym_db.RegisterEnumDescriptor(_CHARACTERSPECIESENUM)
 
@@ -269,8 +419,8 @@ _DATEFORMATCHANGEDATECATEGORYENUM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=14218,
-  serialized_end=14349,
+  serialized_start=14796,
+  serialized_end=14927,
 )
 _sym_db.RegisterEnumDescriptor(_DATEFORMATCHANGEDATECATEGORYENUM)
 
@@ -375,8 +525,8 @@ _WEBSITECATEGORYENUM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=14352,
-  serialized_end=14748,
+  serialized_start=14930,
+  serialized_end=15326,
 )
 _sym_db.RegisterEnumDescriptor(_WEBSITECATEGORYENUM)
 
@@ -428,11 +578,36 @@ _EXTERNALGAMECATEGORYENUM = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='EXTERNALGAME_AMAZON_ASIN', index=8, number=20,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='EXTERNALGAME_AMAZON_LUNA', index=9, number=22,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='EXTERNALGAME_AMAZON_ADG', index=10, number=23,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='EXTERNALGAME_EPIC_GAME_STORE', index=11, number=26,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='EXTERNALGAME_OCULUS', index=12, number=28,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=14751,
-  serialized_end=14984,
+  serialized_start=15329,
+  serialized_end=15710,
 )
 _sym_db.RegisterEnumDescriptor(_EXTERNALGAMECATEGORYENUM)
 
@@ -462,8 +637,8 @@ _EXTERNALGAMEMEDIAENUM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=14986,
-  serialized_end=15091,
+  serialized_start=15712,
+  serialized_end=15817,
 )
 _sym_db.RegisterEnumDescriptor(_EXTERNALGAMEMEDIAENUM)
 
@@ -515,11 +690,36 @@ _GAMECATEGORYENUM = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='REMAKE', index=8, number=8,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='REMASTER', index=9, number=9,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='EXPANDED_GAME', index=10, number=10,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='PORT', index=11, number=11,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='FORK', index=12, number=12,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=15094,
-  serialized_end=15229,
+  serialized_start=15820,
+  serialized_end=16020,
 )
 _sym_db.RegisterEnumDescriptor(_GAMECATEGORYENUM)
 
@@ -566,11 +766,16 @@ _GAMESTATUSENUM = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='DELISTED', index=7, number=8,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=15231,
-  serialized_end=15341,
+  serialized_start=16022,
+  serialized_end=16146,
 )
 _sym_db.RegisterEnumDescriptor(_GAMESTATUSENUM)
 
@@ -595,8 +800,8 @@ _GAMEVERSIONFEATURECATEGORYENUM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=15343,
-  serialized_end=15405,
+  serialized_start=16148,
+  serialized_end=16210,
 )
 _sym_db.RegisterEnumDescriptor(_GAMEVERSIONFEATURECATEGORYENUM)
 
@@ -626,8 +831,8 @@ _GAMEVERSIONFEATUREVALUEINCLUDEDFEATUREENUM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=15407,
-  serialized_end=15503,
+  serialized_start=16212,
+  serialized_end=16308,
 )
 _sym_db.RegisterEnumDescriptor(_GAMEVERSIONFEATUREVALUEINCLUDEDFEATUREENUM)
 
@@ -677,8 +882,8 @@ _PLATFORMCATEGORYENUM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=15506,
-  serialized_end=15653,
+  serialized_start=16311,
+  serialized_end=16458,
 )
 _sym_db.RegisterEnumDescriptor(_PLATFORMCATEGORYENUM)
 
@@ -735,11 +940,21 @@ _REGIONREGIONENUM = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='KOREA', index=9, number=9,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='BRAZIL', index=10, number=10,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=15656,
-  serialized_end=15808,
+  serialized_start=16461,
+  serialized_end=16636,
 )
 _sym_db.RegisterEnumDescriptor(_REGIONREGIONENUM)
 
@@ -769,8 +984,8 @@ _TESTDUMMYENUMTESTENUM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=15810,
-  serialized_end=15885,
+  serialized_start=16638,
+  serialized_end=16713,
 )
 _sym_db.RegisterEnumDescriptor(_TESTDUMMYENUMTESTENUM)
 
@@ -778,6 +993,11 @@ TestDummyEnumTestEnum = enum_type_wrapper.EnumTypeWrapper(_TESTDUMMYENUMTESTENUM
 AGERATING_CATEGORY_NULL = 0
 ESRB = 1
 PEGI = 2
+CERO = 3
+USK = 4
+GRAC = 5
+CLASS_IND = 6
+ACB = 7
 AGERATING_RATING_NULL = 0
 THREE = 1
 SEVEN = 2
@@ -791,10 +1011,35 @@ E10 = 9
 T = 10
 M = 11
 AO = 12
-GENDER_GENDER_NULL = 0
-MALE = 1
-FEMALE = 2
-OTHER = 3
+CERO_A = 13
+CERO_B = 14
+CERO_C = 15
+CERO_D = 16
+CERO_Z = 17
+USK_0 = 18
+USK_6 = 19
+USK_12 = 20
+USK_18 = 21
+GRAC_ALL = 22
+GRAC_TWELVE = 23
+GRAC_FIFTEEN = 24
+GRAC_EIGHTEEN = 25
+GRAC_TESTING = 26
+CLASS_IND_L = 27
+CLASS_IND_TEN = 28
+CLASS_IND_TWELVE = 29
+CLASS_IND_FOURTEEN = 30
+CLASS_IND_SIXTEEN = 31
+CLASS_IND_EIGHTEEN = 32
+ACB_G = 33
+ACB_PG = 34
+ACB_M = 35
+ACB_MA15 = 36
+ACB_R18 = 37
+ACB_RC = 38
+MALE = 0
+FEMALE = 1
+OTHER = 2
 CHARACTER_SPECIES_NULL = 0
 HUMAN = 1
 ALIEN = 2
@@ -835,6 +1080,11 @@ EXTERNALGAME_MICROSOFT = 11
 EXTERNALGAME_APPLE = 13
 EXTERNALGAME_TWITCH = 14
 EXTERNALGAME_ANDROID = 15
+EXTERNALGAME_AMAZON_ASIN = 20
+EXTERNALGAME_AMAZON_LUNA = 22
+EXTERNALGAME_AMAZON_ADG = 23
+EXTERNALGAME_EPIC_GAME_STORE = 26
+EXTERNALGAME_OCULUS = 28
 EXTERNALGAME_MEDIA_NULL = 0
 EXTERNALGAME_DIGITAL = 1
 EXTERNALGAME_PHYSICAL = 2
@@ -846,6 +1096,11 @@ STANDALONE_EXPANSION = 4
 MOD = 5
 EPISODE = 6
 SEASON = 7
+REMAKE = 8
+REMASTER = 9
+EXPANDED_GAME = 10
+PORT = 11
+FORK = 12
 RELEASED = 0
 ALPHA = 2
 BETA = 3
@@ -853,6 +1108,7 @@ EARLY_ACCESS = 4
 OFFLINE = 5
 CANCELLED = 6
 RUMORED = 7
+DELISTED = 8
 BOOLEAN = 0
 DESCRIPTION = 1
 NOT_INCLUDED = 0
@@ -874,6 +1130,8 @@ JAPAN = 5
 CHINA = 6
 ASIA = 7
 WORLDWIDE = 8
+KOREA = 9
+BRAZIL = 10
 TESTDUMMY_ENUM_TEST_NULL = 0
 ENUM1 = 1
 ENUM2 = 2
@@ -2940,6 +3198,41 @@ _GAME = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='remakes', full_name='proto.Game.remakes', index=50,
+      number=51, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='remasters', full_name='proto.Game.remasters', index=51,
+      number=52, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='expanded_games', full_name='proto.Game.expanded_games', index=52,
+      number=53, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ports', full_name='proto.Game.ports', index=53,
+      number=54, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='forks', full_name='proto.Game.forks', index=54,
+      number=55, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2953,7 +3246,7 @@ _GAME = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=4209,
-  serialized_end=5843,
+  serialized_end=5998,
 )
 
 
@@ -2984,8 +3277,8 @@ _GAMEENGINERESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5845,
-  serialized_end=5903,
+  serialized_start=6000,
+  serialized_end=6058,
 )
 
 
@@ -3086,8 +3379,8 @@ _GAMEENGINE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5906,
-  serialized_end=6214,
+  serialized_start=6061,
+  serialized_end=6369,
 )
 
 
@@ -3118,8 +3411,8 @@ _GAMEENGINELOGORESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6216,
-  serialized_end=6286,
+  serialized_start=6371,
+  serialized_end=6441,
 )
 
 
@@ -3199,8 +3492,8 @@ _GAMEENGINELOGO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6289,
-  serialized_end=6438,
+  serialized_start=6444,
+  serialized_end=6593,
 )
 
 
@@ -3231,8 +3524,8 @@ _GAMEMODERESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6440,
-  serialized_end=6492,
+  serialized_start=6595,
+  serialized_end=6647,
 )
 
 
@@ -3305,8 +3598,8 @@ _GAMEMODE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6495,
-  serialized_end=6672,
+  serialized_start=6650,
+  serialized_end=6827,
 )
 
 
@@ -3337,8 +3630,8 @@ _GAMEVERSIONRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6674,
-  serialized_end=6735,
+  serialized_start=6829,
+  serialized_end=6890,
 )
 
 
@@ -3418,8 +3711,8 @@ _GAMEVERSION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6738,
-  serialized_end=6990,
+  serialized_start=6893,
+  serialized_end=7145,
 )
 
 
@@ -3450,8 +3743,8 @@ _GAMEVERSIONFEATURERESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6992,
-  serialized_end=7074,
+  serialized_start=7147,
+  serialized_end=7229,
 )
 
 
@@ -3524,8 +3817,8 @@ _GAMEVERSIONFEATURE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7077,
-  serialized_end=7286,
+  serialized_start=7232,
+  serialized_end=7441,
 )
 
 
@@ -3556,8 +3849,8 @@ _GAMEVERSIONFEATUREVALUERESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7288,
-  serialized_end=7385,
+  serialized_start=7443,
+  serialized_end=7540,
 )
 
 
@@ -3623,8 +3916,8 @@ _GAMEVERSIONFEATUREVALUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7388,
-  serialized_end=7610,
+  serialized_start=7543,
+  serialized_end=7765,
 )
 
 
@@ -3655,8 +3948,8 @@ _GAMEVIDEORESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7612,
-  serialized_end=7667,
+  serialized_start=7767,
+  serialized_end=7822,
 )
 
 
@@ -3715,8 +4008,8 @@ _GAMEVIDEO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7669,
-  serialized_end=7769,
+  serialized_start=7824,
+  serialized_end=7924,
 )
 
 
@@ -3747,8 +4040,8 @@ _GENRERESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7771,
-  serialized_end=7814,
+  serialized_start=7926,
+  serialized_end=7969,
 )
 
 
@@ -3821,8 +4114,8 @@ _GENRE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7817,
-  serialized_end=7991,
+  serialized_start=7972,
+  serialized_end=8146,
 )
 
 
@@ -3853,8 +4146,8 @@ _INVOLVEDCOMPANYRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7993,
-  serialized_end=8067,
+  serialized_start=8148,
+  serialized_end=8222,
 )
 
 
@@ -3948,8 +4241,8 @@ _INVOLVEDCOMPANY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8070,
-  serialized_end=8348,
+  serialized_start=8225,
+  serialized_end=8503,
 )
 
 
@@ -3980,8 +4273,8 @@ _KEYWORDRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8350,
-  serialized_end=8399,
+  serialized_start=8505,
+  serialized_end=8554,
 )
 
 
@@ -4054,8 +4347,8 @@ _KEYWORD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8402,
-  serialized_end=8578,
+  serialized_start=8557,
+  serialized_end=8733,
 )
 
 
@@ -4086,8 +4379,8 @@ _MULTIPLAYERMODERESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8580,
-  serialized_end=8653,
+  serialized_start=8735,
+  serialized_end=8808,
 )
 
 
@@ -4216,8 +4509,8 @@ _MULTIPLAYERMODE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8656,
-  serialized_end=8995,
+  serialized_start=8811,
+  serialized_end=9150,
 )
 
 
@@ -4248,8 +4541,8 @@ _PLATFORMRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8997,
-  serialized_end=9049,
+  serialized_start=9152,
+  serialized_end=9204,
 )
 
 
@@ -4385,8 +4678,8 @@ _PLATFORM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9052,
-  serialized_end=9537,
+  serialized_start=9207,
+  serialized_end=9692,
 )
 
 
@@ -4417,8 +4710,8 @@ _PLATFORMFAMILYRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9539,
-  serialized_end=9610,
+  serialized_start=9694,
+  serialized_end=9765,
 )
 
 
@@ -4470,8 +4763,8 @@ _PLATFORMFAMILY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9612,
-  serialized_end=9686,
+  serialized_start=9767,
+  serialized_end=9841,
 )
 
 
@@ -4502,8 +4795,8 @@ _PLATFORMLOGORESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9688,
-  serialized_end=9752,
+  serialized_start=9843,
+  serialized_end=9907,
 )
 
 
@@ -4583,8 +4876,8 @@ _PLATFORMLOGO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9755,
-  serialized_end=9902,
+  serialized_start=9910,
+  serialized_end=10057,
 )
 
 
@@ -4615,8 +4908,8 @@ _PLATFORMVERSIONRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9904,
-  serialized_end=9977,
+  serialized_start=10059,
+  serialized_end=10132,
 )
 
 
@@ -4787,8 +5080,8 @@ _PLATFORMVERSION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9980,
-  serialized_end=10493,
+  serialized_start=10135,
+  serialized_end=10648,
 )
 
 
@@ -4819,8 +5112,8 @@ _PLATFORMVERSIONCOMPANYRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10495,
-  serialized_end=10590,
+  serialized_start=10650,
+  serialized_end=10745,
 )
 
 
@@ -4886,8 +5179,8 @@ _PLATFORMVERSIONCOMPANY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10593,
-  serialized_end=10738,
+  serialized_start=10748,
+  serialized_end=10893,
 )
 
 
@@ -4918,8 +5211,8 @@ _PLATFORMVERSIONRELEASEDATERESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10740,
-  serialized_end=10846,
+  serialized_start=10895,
+  serialized_end=11001,
 )
 
 
@@ -5020,8 +5313,8 @@ _PLATFORMVERSIONRELEASEDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10849,
-  serialized_end=11232,
+  serialized_start=11004,
+  serialized_end=11387,
 )
 
 
@@ -5052,8 +5345,8 @@ _PLATFORMWEBSITERESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11234,
-  serialized_end=11307,
+  serialized_start=11389,
+  serialized_end=11462,
 )
 
 
@@ -5112,8 +5405,8 @@ _PLATFORMWEBSITE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11309,
-  serialized_end=11432,
+  serialized_start=11464,
+  serialized_end=11587,
 )
 
 
@@ -5144,8 +5437,8 @@ _PLAYERPERSPECTIVERESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11434,
-  serialized_end=11513,
+  serialized_start=11589,
+  serialized_end=11668,
 )
 
 
@@ -5218,8 +5511,8 @@ _PLAYERPERSPECTIVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11516,
-  serialized_end=11702,
+  serialized_start=11671,
+  serialized_end=11857,
 )
 
 
@@ -5250,8 +5543,8 @@ _RELEASEDATERESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11704,
-  serialized_end=11765,
+  serialized_start=11859,
+  serialized_end=11920,
 )
 
 
@@ -5359,8 +5652,8 @@ _RELEASEDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11768,
-  serialized_end=12148,
+  serialized_start=11923,
+  serialized_end=12303,
 )
 
 
@@ -5391,8 +5684,8 @@ _SCREENSHOTRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12150,
-  serialized_end=12208,
+  serialized_start=12305,
+  serialized_end=12363,
 )
 
 
@@ -5479,8 +5772,8 @@ _SCREENSHOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12211,
-  serialized_end=12383,
+  serialized_start=12366,
+  serialized_end=12538,
 )
 
 
@@ -5511,8 +5804,8 @@ _SEARCHRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12385,
-  serialized_end=12432,
+  serialized_start=12540,
+  serialized_end=12587,
 )
 
 
@@ -5627,8 +5920,8 @@ _SEARCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12435,
-  serialized_end=12822,
+  serialized_start=12590,
+  serialized_end=12977,
 )
 
 
@@ -5659,8 +5952,8 @@ _TESTDUMMYRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12824,
-  serialized_end=12880,
+  serialized_start=12979,
+  serialized_end=13035,
 )
 
 
@@ -5810,8 +6103,8 @@ _TESTDUMMY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12883,
-  serialized_end=13368,
+  serialized_start=13038,
+  serialized_end=13523,
 )
 
 
@@ -5842,8 +6135,8 @@ _THEMERESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13370,
-  serialized_end=13413,
+  serialized_start=13525,
+  serialized_end=13568,
 )
 
 
@@ -5916,8 +6209,8 @@ _THEME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13416,
-  serialized_end=13590,
+  serialized_start=13571,
+  serialized_end=13745,
 )
 
 
@@ -5948,8 +6241,8 @@ _WEBSITERESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13592,
-  serialized_end=13641,
+  serialized_start=13747,
+  serialized_end=13796,
 )
 
 
@@ -6015,8 +6308,8 @@ _WEBSITE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13644,
-  serialized_end=13786,
+  serialized_start=13799,
+  serialized_end=13941,
 )
 
 _MULTIQUERYRESULTARRAY.fields_by_name['result'].message_type = _MULTIQUERYRESULT
@@ -6105,6 +6398,11 @@ _GAME.fields_by_name['updated_at'].message_type = google_dot_protobuf_dot_timest
 _GAME.fields_by_name['version_parent'].message_type = _GAME
 _GAME.fields_by_name['videos'].message_type = _GAMEVIDEO
 _GAME.fields_by_name['websites'].message_type = _WEBSITE
+_GAME.fields_by_name['remakes'].message_type = _GAME
+_GAME.fields_by_name['remasters'].message_type = _GAME
+_GAME.fields_by_name['expanded_games'].message_type = _GAME
+_GAME.fields_by_name['ports'].message_type = _GAME
+_GAME.fields_by_name['forks'].message_type = _GAME
 _GAMEENGINERESULT.fields_by_name['gameengines'].message_type = _GAMEENGINE
 _GAMEENGINE.fields_by_name['companies'].message_type = _COMPANY
 _GAMEENGINE.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
