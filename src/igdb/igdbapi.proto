@@ -336,6 +336,14 @@ enum ExternalGameCategoryEnum {
     EXTERNALGAME_AMAZON_ADG = 23;
     EXTERNALGAME_EPIC_GAME_STORE = 26;
     EXTERNALGAME_OCULUS = 28;
+    EXTERNALGAME_UTOMIK = 29;
+    EXTERNALGAME_ITCH_IO = 30;
+    EXTERNALGAME_XBOX_MARKETPLACE = 31;
+    EXTERNALGAME_KARTRIDGE = 32;
+    EXTERNALGAME_PLAYSTATION_STORE_US = 36;
+    EXTERNALGAME_FOCUS_ENTERTAINMENT = 37;
+    EXTERNALGAME_XBOX_GAME_PASS_ULTIMATE_CLOUD = 54;
+    EXTERNALGAME_GAMEJOLT = 55;
 }
 
 
@@ -420,6 +428,7 @@ message Game {
     repeated Game expanded_games = 53; 
     repeated Game ports = 54; 
     repeated Game forks = 55; 
+    repeated LanguageSupport language_supports = 56; 
 }
 
 
@@ -608,6 +617,46 @@ message Keyword {
     google.protobuf.Timestamp updated_at = 5; 
     string url = 6; 
     string checksum = 7; 
+}
+
+message LanguageResult {
+    repeated Language languages = 1;
+}
+
+message Language {
+    uint64 id = 1;
+    string name = 2; 
+    string native_name = 3; 
+    string locale = 4; 
+    google.protobuf.Timestamp created_at = 5; 
+    google.protobuf.Timestamp updated_at = 6; 
+    string checksum = 7; 
+}
+
+message LanguageSupportResult {
+    repeated LanguageSupport languagesupports = 1;
+}
+
+message LanguageSupport {
+    uint64 id = 1;
+    Game game = 2; 
+    Language language = 3; 
+    LanguageSupportType language_support_type = 4; 
+    google.protobuf.Timestamp created_at = 5; 
+    google.protobuf.Timestamp updated_at = 6; 
+    string checksum = 7; 
+}
+
+message LanguageSupportTypeResult {
+    repeated LanguageSupportType languagesupporttypes = 1;
+}
+
+message LanguageSupportType {
+    uint64 id = 1;
+    string name = 2; 
+    google.protobuf.Timestamp created_at = 3; 
+    google.protobuf.Timestamp updated_at = 4; 
+    string checksum = 5; 
 }
 
 message MultiplayerModeResult {
