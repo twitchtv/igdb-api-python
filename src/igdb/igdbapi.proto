@@ -299,6 +299,7 @@ message Cover {
     string url = 7; 
     int32 width = 8; 
     string checksum = 9; 
+    GameLocalization game_localization = 10; 
 }
 
 message ExternalGameResult {
@@ -429,6 +430,7 @@ message Game {
     repeated Game ports = 54; 
     repeated Game forks = 55; 
     repeated LanguageSupport language_supports = 56; 
+    repeated GameLocalization game_localizations = 57; 
 }
 
 
@@ -446,6 +448,8 @@ enum GameCategoryEnum {
     EXPANDED_GAME = 10;
     PORT = 11;
     FORK = 12;
+    PACK = 13;
+    UPDATE = 14;
 }
 
 
@@ -490,6 +494,21 @@ message GameEngineLogo {
     string image_id = 5; 
     string url = 6; 
     int32 width = 7; 
+    string checksum = 8; 
+}
+
+message GameLocalizationResult {
+    repeated GameLocalization gamelocalizations = 1;
+}
+
+message GameLocalization {
+    uint64 id = 1;
+    string name = 2; 
+    Cover cover = 3; 
+    Game game = 4; 
+    Region region = 5; 
+    google.protobuf.Timestamp created_at = 6; 
+    google.protobuf.Timestamp updated_at = 7; 
     string checksum = 8; 
 }
 
@@ -838,6 +857,20 @@ message PlayerPerspective {
     string slug = 4; 
     google.protobuf.Timestamp updated_at = 5; 
     string url = 6; 
+    string checksum = 7; 
+}
+
+message RegionResult {
+    repeated Region regions = 1;
+}
+
+message Region {
+    uint64 id = 1;
+    string name = 2; 
+    string category = 3; 
+    string identifier = 4; 
+    google.protobuf.Timestamp created_at = 5; 
+    google.protobuf.Timestamp updated_at = 6; 
     string checksum = 7; 
 }
 

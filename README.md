@@ -84,6 +84,9 @@ pipenv install --dev
 ```
 
 ### Protocol Buffers
+
+If you want to update the library to use the latest Protobuf file from api.igdb.com you can run ./update-protobuf.sh
+
 #### Windows
 This project uses [protoc](https://github.com/protocolbuffers/protobuf/releases) to generate the protocol buffer wrapper.
 ```
