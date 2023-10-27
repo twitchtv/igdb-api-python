@@ -1,5 +1,4 @@
 """IGDB wrapper module for the api v4 with Apicalypse"""
-from typing import Dict
 from requests import post
 
 
