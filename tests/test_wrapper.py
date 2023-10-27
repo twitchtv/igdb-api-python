@@ -1,5 +1,3 @@
-import os
-
 from pytest import raises
 from src.igdb.wrapper import IGDBWrapper
 
