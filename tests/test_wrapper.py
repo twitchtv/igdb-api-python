@@ -2,8 +2,6 @@ import os
 
 from pytest import raises
 from src.igdb.wrapper import IGDBWrapper
-from src.igdb.igdbapi_pb2 import *
-import json
 
 
 def test_stores_authentication():
