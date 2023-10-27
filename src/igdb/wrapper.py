@@ -27,7 +27,7 @@ class IGDBWrapper:
     def _build_url(endpoint: str = '') -> str:
         return '%s%s' % (API_URL, endpoint)
 
-    def _compose_request(self, query: str) -> Dict:
+    def _compose_request(self, query: str) -> dict:
         if not query:
             raise Exception(
                 'No query provided!\nEither provide an inline query following Apicalypse\'s syntax or an Apicalypse object')
