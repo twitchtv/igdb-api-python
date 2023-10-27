@@ -65,6 +65,7 @@ byte_array = wrapper.api_request(
           )
 games_message = GameResult()
 games_message.ParseFromString(byte_array) # Fills the protobuf message object with the response
+games = games_message.games
 ```
 
 ## Exceptions

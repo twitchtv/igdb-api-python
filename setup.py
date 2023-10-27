@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
     
 setup(
   name="igdb-api-v4",
-  version="0.2.0",
+  version="0.3.0",
   author="IGDB",
   author_email="dev@igdb.com",
   description="An API wrapper for IGDB API v4",

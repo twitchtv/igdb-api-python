@@ -287,6 +287,79 @@ message Collection {
     google.protobuf.Timestamp updated_at = 6; 
     string url = 7; 
     string checksum = 8; 
+    CollectionType type = 9; 
+    repeated CollectionRelation as_parent_relations = 10; 
+    repeated CollectionRelation as_child_relations = 11; 
+}
+
+message CollectionMembershipResult {
+    repeated CollectionMembership collectionmemberships = 1;
+}
+
+message CollectionMembership {
+    uint64 id = 1;
+    Game game = 2; 
+    Collection collection = 3; 
+    CollectionMembershipType type = 4; 
+    google.protobuf.Timestamp updated_at = 5; 
+    google.protobuf.Timestamp created_at = 6; 
+    string checksum = 7; 
+}
+
+message CollectionMembershipTypeResult {
+    repeated CollectionMembershipType collectionmembershiptypes = 1;
+}
+
+message CollectionMembershipType {
+    uint64 id = 1;
+    string name = 2; 
+    string description = 3; 
+    CollectionType allowed_collection_type = 4; 
+    google.protobuf.Timestamp updated_at = 5; 
+    google.protobuf.Timestamp created_at = 6; 
+    string checksum = 7; 
+}
+
+message CollectionRelationResult {
+    repeated CollectionRelation collectionrelations = 1;
+}
+
+message CollectionRelation {
+    uint64 id = 1;
+    Collection child_collection = 2; 
+    Collection parent_collection = 3; 
+    CollectionRelationType type = 4; 
+    google.protobuf.Timestamp updated_at = 5; 
+    google.protobuf.Timestamp created_at = 6; 
+    string checksum = 7; 
+}
+
+message CollectionRelationTypeResult {
+    repeated CollectionRelationType collectionrelationtypes = 1;
+}
+
+message CollectionRelationType {
+    uint64 id = 1;
+    string name = 2; 
+    string description = 3; 
+    CollectionType allowed_child_type = 4; 
+    CollectionType allowed_parent_type = 5; 
+    google.protobuf.Timestamp updated_at = 6; 
+    google.protobuf.Timestamp created_at = 7; 
+    string checksum = 8; 
+}
+
+message CollectionTypeResult {
+    repeated CollectionType collectiontypes = 1;
+}
+
+message CollectionType {
+    uint64 id = 1;
+    string name = 2; 
+    string description = 3; 
+    google.protobuf.Timestamp updated_at = 4; 
+    google.protobuf.Timestamp created_at = 5; 
+    string checksum = 6; 
 }
 
 message CompanyResult {
@@ -391,6 +464,60 @@ message Cover {
     int32 width = 8; 
     string checksum = 9; 
     GameLocalization game_localization = 10; 
+}
+
+message EventResult {
+    repeated Event events = 1;
+}
+
+message Event {
+    uint64 id = 1;
+    string name = 2; 
+    string description = 3; 
+    string slug = 4; 
+    EventLogo event_logo = 5; 
+    google.protobuf.Timestamp start_time = 6; 
+    string time_zone = 7; 
+    google.protobuf.Timestamp end_time = 8; 
+    string live_stream_url = 9; 
+    repeated Game games = 10; 
+    repeated GameVideo videos = 11; 
+    repeated EventNetwork event_networks = 12; 
+    google.protobuf.Timestamp created_at = 13; 
+    google.protobuf.Timestamp updated_at = 14; 
+    string checksum = 15; 
+}
+
+message EventLogoResult {
+    repeated EventLogo eventlogos = 1;
+}
+
+message EventLogo {
+    uint64 id = 1;
+    Event event = 2; 
+    bool alpha_channel = 3; 
+    bool animated = 4; 
+    int32 height = 5; 
+    string image_id = 6; 
+    string url = 7; 
+    int32 width = 8; 
+    google.protobuf.Timestamp created_at = 9; 
+    google.protobuf.Timestamp updated_at = 10; 
+    string checksum = 11; 
+}
+
+message EventNetworkResult {
+    repeated EventNetwork eventnetworks = 1;
+}
+
+message EventNetwork {
+    uint64 id = 1;
+    Event event = 2; 
+    string url = 3; 
+    NetworkType network_type = 4; 
+    google.protobuf.Timestamp created_at = 5; 
+    google.protobuf.Timestamp updated_at = 6; 
+    string checksum = 7; 
 }
 
 message ExternalGameResult {
@@ -522,6 +649,7 @@ message Game {
     repeated Game forks = 55; 
     repeated LanguageSupport language_supports = 56; 
     repeated GameLocalization game_localizations = 57; 
+    repeated Collection collections = 58; 
 }
 
 
@@ -789,6 +917,19 @@ message MultiplayerMode {
     bool splitscreen = 13; 
     bool splitscreenonline = 14; 
     string checksum = 15; 
+}
+
+message NetworkTypeResult {
+    repeated NetworkType networktypes = 1;
+}
+
+message NetworkType {
+    uint64 id = 1;
+    string name = 2; 
+    repeated EventNetwork event_networks = 3; 
+    google.protobuf.Timestamp created_at = 4; 
+    google.protobuf.Timestamp updated_at = 5; 
+    string checksum = 6; 
 }
 
 message PlatformResult {
