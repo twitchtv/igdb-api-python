@@ -1,12 +1,14 @@
 from pytest import raises
 from src.igdb.wrapper import IGDBWrapper
 
+
 def test_stores_authentication():
     wrapper = IGDBWrapper('client', 'token')
     assert hasattr(wrapper, 'client_id')
     assert wrapper.client_id == 'client'
     assert hasattr(wrapper, 'auth_token')
     assert wrapper.auth_token == 'token'
+
 
 def test_composes_query():
     wrapper = IGDBWrapper('client', 'token')
@@ -18,6 +20,7 @@ def test_composes_query():
             'Authorization': 'Bearer token'
         }
     }
+
 
 def test_raises_when_query_bad():
     wrapper = IGDBWrapper('', '')
