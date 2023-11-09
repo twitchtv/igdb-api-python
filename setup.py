@@ -1,11 +1,12 @@
 from setuptools import setup
+import os
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
     
 setup(
   name="igdb-api-v4",
-  version="0.3.0",
+  version=os.environ["VERSION"],
   author="IGDB",
   author_email="dev@igdb.com",
   description="An API wrapper for IGDB API v4",
