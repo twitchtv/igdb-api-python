@@ -78,6 +78,8 @@ byte_array = wrapper.api_request(
 covers_message = CoverResult()
 covers_message.ParseFromString(byte_array)
 covers = [cover.url for cover in covers_message.covers]
+```
+You may need to do some digging around in igdbapi_pb2.py (being careful not to actually edit anything) to look for similar functions to GameResult() and CoverResult() based on what you are trying to query for.
 
 ## Exceptions
 
