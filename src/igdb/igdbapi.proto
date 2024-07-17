@@ -607,7 +607,7 @@ message Game {
     repeated Game expansions = 13; 
     repeated ExternalGame external_games = 14; 
     google.protobuf.Timestamp first_release_date = 15; 
-    int32 follows = 16; 
+    int32 follows = 16 [deprecated = true]; 
     Franchise franchise = 17; 
     repeated Franchise franchises = 18; 
     repeated GameEngine game_engines = 19; 
@@ -1090,6 +1090,41 @@ message PlayerPerspective {
     google.protobuf.Timestamp updated_at = 5; 
     string url = 6; 
     string checksum = 7; 
+}
+
+message PopularityPrimitiveResult {
+    repeated PopularityPrimitive popularityprimitives = 1;
+}
+
+message PopularityPrimitive {
+    uint64 id = 1;
+    int32 game_id = 2; 
+    PopularityType popularity_type = 3; 
+    PopularitySourcePopularitySourceEnum popularity_source = 4; 
+    double value = 5; 
+    google.protobuf.Timestamp calculated_at = 6; 
+    google.protobuf.Timestamp created_at = 7; 
+    google.protobuf.Timestamp updated_at = 8; 
+    string checksum = 9; 
+}
+
+
+enum PopularitySourcePopularitySourceEnum {
+    POPULARITYSOURCE_POPULARITY_SOURCE_NULL = 0;
+    IGDB = 121;
+}
+
+message PopularityTypeResult {
+    repeated PopularityType popularitytypes = 1;
+}
+
+message PopularityType {
+    uint64 id = 1;
+    PopularitySourcePopularitySourceEnum popularity_source = 2; 
+    string name = 3; 
+    google.protobuf.Timestamp created_at = 4; 
+    google.protobuf.Timestamp updated_at = 5; 
+    string checksum = 6; 
 }
 
 message RegionResult {
