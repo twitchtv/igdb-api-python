@@ -68,6 +68,19 @@ games_message.ParseFromString(byte_array) # Fills the protobuf message object wi
 games = games_message.games
 ```
 
+Note that depending on what type of query you're doing, you will need to parse it differently. Consider the following example of getting covers with a Protobuf API request:
+```
+from igdb.igdbapi_pb2 import CoverResult
+byte_array = wrapper.api_request(
+            'covers.pb',
+            'fields url; limit 10;'
+          )
+covers_message = CoverResult()
+covers_message.ParseFromString(byte_array)
+covers = [cover.url for cover in covers_message.covers]
+```
+You may need to do some digging around in igdbapi_pb2.py (being careful not to actually edit anything) to look for similar functions to GameResult() and CoverResult() based on what you are trying to query for.
+
 ## Exceptions
 
 The wrapper throws a [`requests.HTTPError`](https://2.python-requests.org/en/master/api/#requests.HTTPError) when an exception occurs from the API.
