@@ -74,6 +74,65 @@ The wrapper throws a [`requests.HTTPError`](https://2.python-requests.org/en/mas
 
 ## Code Examples
 
+You can add a rate limiter to your requests using a package like `pyrate-limiter` to avoid hitting IGDB's rate limits. Here's an example:
+
+```py
+import time
+
+from pyrate_limiter import Duration, RequestRate, Limiter, BucketFullException
+
+from igdb.wrapper import IGDBWrapper
+
+IGDB_RATE = RequestRate(4, Duration.SECOND)
+IGDB_LIMITER = Limiter(IGDB_RATE)
+
+class RateLimitedIGDBWrapper:
+    """
+    Wrapper around the original IGDBWrapper that enforces a rate limit
+    before calling api_request.
+    """
+
+    def __init__(self, client_id: str, auth_token: str, limiter: Limiter) -> None:
+        # Keep an instance of the original wrapper
+        self._wrapper = IGDBWrapper(client_id, auth_token)
+        self.limiter = limiter
+
+    def api_request(self, endpoint: str, query: str, max_retries: int = 3) -> bytes:
+        """
+        Enforce rate limit before calling the underlying IGDB API request.
+        """
+        for attempt in range(max_retries):
+            try:
+                # 1. Generate a limiter bucket and try to acquire permission
+                self.limiter.try_acquire('igdb_api_call')
+
+                # 2. If successful, call the original library method
+                return self._wrapper.api_request(endpoint, query)
+
+            except BucketFullException as e:
+                # 3. If the rate limit is hit, wait and retry
+                if attempt < max_retries - 1:
+                    wait_time = 2 ** attempt # Exponential backoff
+                    print(f"Rate limit hit. Waiting {wait_time}s before retry...")
+                    time.sleep(wait_time)
+                    continue
+                else:
+                    raise Exception(f"Permanent rate limit failure after {max_retries} retries: {e}")
+
+        # To satisfy mypy/linter, although normally unreachable
+        raise Exception("Failed to acquire API access.")
+```
+
+You can then use the `RateLimitedIGDBWrapper` like so:
+
+```py
+wrapper = RateLimitedIGDBWrapper("YOUR_CLIENT_ID", "YOUR_APP_ACCESS_TOKEN", IGDB_LIMITER)
+byte_array = wrapper.api_request(
+            'games',
+            'fields id, name; offset 0; where platforms=48;'
+          )
+```
+
 # Contributing / Developers
 
 ## Setup
